@@ -91,7 +91,7 @@ const Stock = () => {
 const mapDispatchToProps = dispatch => {
   return {
     filterStock: (stockFilter) => {
-      dispatch(addBook(stockFilter));
+      dispatch(filterStock(stockFilter));
     },
   }
 };
