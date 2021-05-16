@@ -29,17 +29,9 @@ const Stock = () => {
     setStockFilter(prev => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
+    }));
+    filterStock(stockFilter.category);
   };
-
-  const filterType = filters.actives ? filters.gainers : filters.losers;
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    filterStock(filterType);
-  };
-
-  
 
   useEffect(() => {
     dispatch(fetchStock());
@@ -76,7 +68,7 @@ const Stock = () => {
 
   return (
     <Flex wrap="wrap" display="flex" w="100%">
-      <form id="form" className="form-flex" onSubmit={handleSubmit}>
+      <form id="form" className="form-flex">
         <fieldset>
           <legend>Filter Stock</legend>
           <label className="form-label">Select a category</label>
@@ -89,9 +81,6 @@ const Stock = () => {
           >
             {selectedstocks}
           </select>
-          <button type='submit'  className="add-btn">
-            Submit
-          </button>
         </fieldset>
       </form>
       {renderStocks()}
