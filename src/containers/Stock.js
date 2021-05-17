@@ -16,11 +16,7 @@ const Stock = () => {
   const dispatch = useDispatch();
   const { stocks, loading, error } = useSelector((state) => state.stocks);
 
-  const selectedstocks = filters.map(filter => (
-    <option key={filter} value={filter === 'actives' ? '' : filter}>
-      {filter}
-    </option>
-  ));
+  const selectedstocks = filters.map(filter => <option key={filter} value={filter}>{filter}</option>);
 
   const handleChange = e => {
     dispatch(filterStock(e.target.value));
