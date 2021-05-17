@@ -1,20 +1,22 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router';
 import { fetchStockItem } from '../actions/index';
 import { Jumbotron, Container } from 'react-bootstrap';
 import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBullish, FcBearish } from 'react-icons/fc';
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router';
 
 const StockDetail = () => {
   const dispatch = useDispatch();
   const { stockItem, loading, error } = useSelector((state) => state.stockItem);
-  const { ticker } = useParams()
+  const { ticker } = useParams();
+
+  console.log(ticker)
 
   useEffect(() => {
-    dispatch(fetchStockItem());
+    dispatch(fetchStockItem(ticker));
   },[dispatch])
 
   if (loading) return <h1>Loading data...</h1>;
