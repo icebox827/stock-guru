@@ -30,8 +30,10 @@ const Companies = () => {
           <div>
             <span className="info">Industry :</span>
             {company.industry}
+            <br />
             <span className="info">Exchange :</span>
             {company.exchangeShortName}
+            <br />
             <span className="info">Country :</span>
             {company.country}
           </div>

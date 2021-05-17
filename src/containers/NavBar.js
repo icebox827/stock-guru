@@ -7,17 +7,17 @@ const NavBar = () => {
      <Grid templateColumns="repeat(3, 1fr)">
       <Box bg="tomato">
         <MenuItem>
-          <Link to="/">Company</Link>
+          <Link to="/"><h3>Stock</h3></Link>
         </MenuItem>
       </Box>
       <Box bg="tomato">
         <MenuItem>
-          <Link to="/stock">Stock</Link>
+          <Link to="/company"><h3>Company</h3></Link>
         </MenuItem>
       </Box>
       <Box bg="tomato">
         <MenuItem>
-          <Link to="/forex">Forex</Link>
+          <Link to="/forex"><h3>Forex</h3></Link>
         </MenuItem>
       </Box>
     </Grid>

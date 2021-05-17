@@ -14,8 +14,8 @@ const Routes = () => {
       <Router>
       <NavBar />
       <Switch>
-        <Route exact path='/' component={Companies} />
-        <Route exact path='/stock' component={Stock} />
+        <Route exact path='/' component={Stock} />
+        <Route exact path='/company' component={Companies} />
         <Route exact path='/forex' component={Forex} />
       </Switch>
       </Router>

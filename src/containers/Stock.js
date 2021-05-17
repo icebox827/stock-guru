@@ -61,7 +61,6 @@ const Stock = () => {
           </span>
           </div>
        </Card.Body>
-       <a href="/stock" className="btn btn-primary">More... </a>
      </Card>
     ));
   };
