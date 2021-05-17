@@ -1,11 +1,10 @@
 import { Flex } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStock } from '../actions/index';
 import { Card } from 'react-bootstrap';
 import { filterStock } from '../actions/index';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 const filters = [
   'actives',
@@ -16,12 +15,6 @@ const filters = [
 const Stock = () => {
   const dispatch = useDispatch();
   const { stocks, loading, error } = useSelector((state) => state.stocks);
-  const [stockFilter, setStockFilter] = useState({
-    ticker: '',
-    companyName: '', 
-    price: '',
-    changesPercentage: '',
-  });
 
   const selectedstocks = filters.map(filter => (
     <option key={filter} value={filter === 'actives' ? '' : filter}>
@@ -30,11 +23,7 @@ const Stock = () => {
   ));
 
   const handleChange = e => {
-    setStockFilter(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-    filterStock(stockFilter.category);
+    dispatch(filterStock(e.target.value));
   };
 
   useEffect(() => {
@@ -75,8 +64,7 @@ const Stock = () => {
             className="category-field"
             id="category"
             name="category"
-            onChange={e => handleChange(e.target.value)}
-            value={stockFilter.filter}
+            onChange={handleChange}
           >
             {selectedstocks}
           </select>
@@ -87,16 +75,8 @@ const Stock = () => {
   )
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    filterStock: (stockFilter) => {
-      dispatch(filterStock(stockFilter));
-    },
-  }
-};
-
 Stock.propTypes = {
   filterStock: PropTypes.func.isRequired,
 };
 
-export default connect(null, mapDispatchToProps)(Stock);
+export default Stock;
