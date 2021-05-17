@@ -23,20 +23,19 @@ const Companies = () => {
         <Card.Body className="border-bottom">
           <Card.Title className="symbol">{company.symbol}</Card.Title>
           <Card.Subtitle className="companyName">{company.companyName}</Card.Subtitle>
-          <Card.Text className="mt-3">
-            <span className="profit">Sector :</span>
+          <Card.Text className="companyText">
+            <span className="profit">Sector : </span>
             {company.sector}
-          </Card.Text>
-          <div>
-            <span className="info">Industry :</span>
+            <br />
+            <span className="info">Industry : </span>
             {company.industry}
             <br />
-            <span className="info">Exchange :</span>
+            <span className="info">Exchange : </span>
             {company.exchangeShortName}
             <br />
-            <span className="info">Country :</span>
+            <span className="info">Country : </span>
             {company.country}
-          </div>
+          </Card.Text>
         </Card.Body>
       </Card>
     ));
