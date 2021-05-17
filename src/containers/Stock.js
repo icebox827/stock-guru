@@ -22,6 +22,10 @@ const Stock = () => {
   };
 
   useEffect(() => {
+    
+  },[dispatch]);
+
+  useEffect(() => {
     dispatch(fetchStock());
   },[dispatch]);
 
