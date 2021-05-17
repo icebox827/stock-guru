@@ -29,3 +29,9 @@ body {
 .companyText {
   padding-left: 5px;
 }
+
+.link {
+  font-weight: 800;
+  font-size: x-large;
+  text-align: center;
+}
