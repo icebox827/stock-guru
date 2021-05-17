@@ -1,9 +1,10 @@
 import { Flex } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchStock } from '../actions/index';
 import { Card } from 'react-bootstrap';
 import { filterStock } from '../actions/index';
+import PropTypes from 'prop-types';
+
 const filters = [
   'actives',
   'gainers',
@@ -54,11 +55,23 @@ const Stock = () => {
                  {stock.changesPercentage}
                </Card.Text>
             </Card.Body>
+            <a href={`\\stock\\${stock.ticker}`} className="btn btn-success w-100">Details</a>
           </Card>
          ))
       }
     </Flex>
   )
+};
+
+
+Stock.propTypes = {
+  stock: PropTypes.shape({
+    ticker: PropTypes.string.isRequired,
+    companyName: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    currency: PropTypes.string,
+    changesPercentage: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Stock;
