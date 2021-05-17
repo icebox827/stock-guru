@@ -66,7 +66,8 @@ const StockDetail = () => {
               className="float-left m-2 img-thumbnail w-25"
             />
             { stockItem.description }
-            <a href={stockItem.website} target="__blank" rel="noopener">
+            <br />
+            <a href={stockItem.website} target="__blank" rel="noopener" className="website">
               {' '}
               Visit Website
             </a>
