@@ -23,7 +23,11 @@ const Stock = () => {
     changesPercentage: '',
   });
 
-  const selectedstocks = filters.map(filter => <option key={filter} value={filter}>{filter}</option>);
+  const selectedstocks = filters.map(filter => (
+    <option key={filter} value={filter === 'actives' ? '' : filter}>
+      {filter}
+    </option>
+  ));
 
   const handleChange = e => {
     setStockFilter(prev => ({
