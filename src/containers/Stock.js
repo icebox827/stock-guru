@@ -42,24 +42,20 @@ const Stock = () => {
     if (error) return <h1>Error try again!</h1>;
 
     return stocks.map((stock) => (
-     <Card className="stockCard" key={stock.ticker}>
+     <Card style={{ width: '21rem' }} className="bg-dark text-white mt-5" key={stock.ticker}>
        <Card.Body>
          <Card.Title className="ticker">{stock.ticker}</Card.Title>
          <Card.Subtitle className="companyName">{stock.companyName}</Card.Subtitle>
-         <Card.Text className="mt-3">
-            <span className="profit">Price</span>
+         <Card.Text className="stockText">
+            <span className="profit">Price: </span>
             {stock.price}
             {' '}
             USD
-          </Card.Text>
-          <div>
-          <span className="profit">Profit</span>
-          {' '}
-          <span className="data">
-            <span className="changes"></span>
+            <br />
+            <span className="profit">Profit: </span>
+            {' '}
             {stock.changesPercentage}
-          </span>
-          </div>
+          </Card.Text>
        </Card.Body>
      </Card>
     ));
