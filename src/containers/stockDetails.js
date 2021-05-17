@@ -1,10 +1,25 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router';
+import { fetchStockItem } from '../actions/index';
 import { Jumbotron, Container } from 'react-bootstrap';
 import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBullish, FcBearish } from 'react-icons/fc';
 import PropTypes from 'prop-types';
 
-const StockDetail = ({ stockItem }) => {
+const StockDetail = () => {
+  const dispatch = useDispatch();
+  const { stockItem, loading, error } = useSelector((state) => state.stockItem);
+  const { ticker } = useParams()
+
+  useEffect(() => {
+    dispatch(fetchStockItem());
+  },[dispatch])
+
+  if (loading) return <h1>Loading data...</h1>;
+  if (error) return <h1>Error try again!</h1>;
+
   return (
     <div>
       <Jumbotron fluid>
@@ -24,6 +39,12 @@ const StockDetail = ({ stockItem }) => {
               {stockItem.changes > 0 ? <FcBullish size={40} /> : <FcBearish size={40} />}
             </small>
           </h1>
+          <h2 className="text-center text-success">
+            <BsFillForwardFill color="transparent" />
+            CEO:
+            {' '}
+            { stockItem.ceo }
+          </h2>
           <h4 className="text-center text-success">
             { stockItem.companyName }
             <BsFillForwardFill color="transparent" />
