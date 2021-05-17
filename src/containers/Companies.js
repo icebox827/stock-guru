@@ -19,8 +19,8 @@ const Companies = () => {
     if (error) return <h1>Error try again!</h1>;
 
     return companies.map((company) => (
-      <Card className="companyCard" key={company.symbol}>
-        <Card.Body>
+      <Card style={{ width: '21rem' }} className="bg-dark text-white mt-3" key={company.symbol}>
+        <Card.Body className="border-bottom">
           <Card.Title className="symbol">{company.symbol}</Card.Title>
           <Card.Subtitle className="companyName">{company.companyName}</Card.Subtitle>
           <Card.Text className="mt-3">
