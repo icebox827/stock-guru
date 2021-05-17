@@ -75,7 +75,7 @@ const Stock = () => {
             className="category-field"
             id="category"
             name="category"
-            onChange={handleChange}
+            onChange={e => handleChange(e.target.value)}
             value={stockFilter.filter}
           >
             {selectedstocks}
