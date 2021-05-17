@@ -18,7 +18,7 @@ const Routes = () => {
         <Route exact path='/' component={Stock} />
         <Route exact path='/company' component={Companies} />
         <Route exact path='/forex' component={Forex} />
-        <Route exact path='/stockDetail' component={StockDetail} />
+        <Route exact path='/stockDetail/:ticker' component={StockDetail} />
       </Switch>
       </Router>
     </Provider>
