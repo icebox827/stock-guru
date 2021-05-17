@@ -11,7 +11,11 @@ import {
   FILTER_STOCK_REQUEST,
   FILTER_STOCK_SUCCESS,
   FILTER_STOCK_FAILURE,
+  FETCH_STOCK_ITEM_REQUEST,
+  FETCH_STOCK_ITEM_SUCCESS,
+  FETCH_STOCK_ITEM_FAILURE,
 } from './action';
+
 const fetchStock = () => async(dispatch) => {
   dispatch({ type: FETCH_STOCK_REQUEST });
   try {
@@ -54,4 +58,15 @@ const filterStock = (stock="actives") => async(dispatch) => {
   }
 };
 
-export { fetchStock, fetchCompanies, fetchForex, filterStock };
+const fetchStockItem = ({ticker}) => async(dispatch) => {
+  dispatch({ type: FETCH_STOCK_ITEM_REQUEST });
+  try {
+    const response = await fetch(`https://financialmodelingprep.com/api/v3/profile/${ticker}?apikey=71692019ce2067a12139d5ef9415ecdb`);
+    const data = await response.json();
+    dispatch({ type: FETCH_STOCK_ITEM_SUCCESS, payload: data})
+  } catch (error) {
+    dispatch({ type: FETCH_STOCK_ITEM_FAILURE, payload: error})
+  }
+};
+
+export { fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem };
