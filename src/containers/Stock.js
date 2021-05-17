@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchStock } from '../actions/index';
 import { Card } from 'react-bootstrap';
 import { filterStock } from '../actions/index';
-import PropTypes from 'prop-types';
 
 const filters = [
   'actives',
@@ -69,10 +68,6 @@ const Stock = () => {
       {renderStocks()}
     </Flex>
   )
-};
-
-Stock.propTypes = {
-  filterStock: PropTypes.func.isRequired,
 };
 
 export default Stock;
