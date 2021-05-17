@@ -4,7 +4,7 @@ import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBullish, FcBearish } from 'react-icons/fc';
 import PropTypes from 'prop-types';
 
-function StockDetail({ stockItem }) {
+const StockDetail = ({ stockItem }) => {
   return (
     <div>
       <Jumbotron fluid>

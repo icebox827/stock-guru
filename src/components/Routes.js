@@ -5,6 +5,7 @@ import NavBar from '../containers/NavBar'
 import Stock from '../containers/Stock'
 import Companies from '../containers/Companies'
 import Forex from '../containers/Forex'
+import StockDetail from '../containers/stockDetails';
 import '../styles/App.css';
 import store from '../store';
 
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route exact path='/' component={Stock} />
         <Route exact path='/company' component={Companies} />
         <Route exact path='/forex' component={Forex} />
+        <Route exact path='/stockDetail' component={StockDetail} />
       </Switch>
       </Router>
     </Provider>
