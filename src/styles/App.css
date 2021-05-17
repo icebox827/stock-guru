@@ -35,3 +35,15 @@ body {
   font-size: x-large;
   text-align: center;
 }
+
+.ticker {
+  font-weight: 800;
+  background-color: brown;
+  text-align: center;
+  color: white;
+}
+
+.forexText {
+  padding-left: 10px;
+  background-color: wheat;
+}

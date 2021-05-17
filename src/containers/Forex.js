@@ -17,17 +17,17 @@ const Forex = () => {
     if (error) return <h1>Error try again!</h1>;
 
     return forex.map((fx) => (
-      <Card className="forexCard" key={fx.ticker}>
+      <Card style={{ width: '21rem' }} className="bg-dark text-white mt-3" key={fx.ticker}>
         <Card.Body>
           <Card.Title className="ticker"><h2>{fx.ticker}</h2></Card.Title>
-          <Card.Text>
+          <Card.Text className="forexText">
             <h3>Bid : {fx.bid}</h3>
             <h3>Ask : {fx.ask}</h3>
             <h3>Open: {fx.open}</h3>
             <h3>Low: {fx.low}</h3>
             <h3>High: {fx.high}</h3>
-            <h6>{fx.changes}</h6>
-            <h5>{fx.date}</h5>
+            <h6>Changes: {fx.changes}</h6>
+            <h5>Date: {fx.date}</h5>
           </Card.Text>
         </Card.Body>
       </Card>
