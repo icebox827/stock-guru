@@ -55,7 +55,7 @@ const Stock = () => {
                  {stock.changesPercentage}
                </Card.Text>
             </Card.Body>
-            <a href={`\\stock\\${stock.ticker}`} className="btn btn-success w-100">Details</a>
+            <a href={`\\stock\\${stock.ticker}`} className="btn">Details</a>
           </Card>
          ))
       }
