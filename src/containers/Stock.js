@@ -10,18 +10,23 @@ const filters = [
   'gainers',
   'losers'
 ];
+
 const Stock = () => {
   const dispatch = useDispatch();
   const { filter, loading, error } = useSelector((state) => state.filter);
   const selectedstocks = filters.map(filter => <option key={filter} value={filter}>{filter}</option>);
+
   const handleChange = e => {
     dispatch(filterStock(e.target.value));
   };
+
   useEffect(() => {
     dispatch(filterStock());
   },[dispatch]);
-    if (loading) return <h1>Loading data...</h1>;
-    if (error) return <h1>Error try again!</h1>;
+
+  if (loading) return <h1>Loading data...</h1>;
+  if (error) return <h1>Error try again!</h1>;
+  
   return (
     <Flex wrap="wrap" display="flex" w="100%">
       <form id="form" className="form-flex">
@@ -71,7 +76,7 @@ Stock.propTypes = {
     price: PropTypes.string.isRequired,
     currency: PropTypes.string,
     changesPercentage: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
 };
 
 export default Stock;

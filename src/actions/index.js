@@ -58,12 +58,12 @@ const filterStock = (stock="actives") => async(dispatch) => {
   }
 };
 
-const fetchStockItem = ({ticker}) => async(dispatch) => {
+const fetchStockItem = ({symbol}) => async(dispatch) => {
   dispatch({ type: FETCH_STOCK_ITEM_REQUEST });
   try {
-    const response = await fetch(`https://financialmodelingprep.com/api/v3/profile/${ticker}?apikey=71692019ce2067a12139d5ef9415ecdb`);
+    const response = await fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=71692019ce2067a12139d5ef9415ecdb`);
     const data = await response.json();
-    dispatch({ type: FETCH_STOCK_ITEM_SUCCESS, payload: data})
+    dispatch({ type: FETCH_STOCK_ITEM_SUCCESS, payload: data[0]})
   } catch (error) {
     dispatch({ type: FETCH_STOCK_ITEM_FAILURE, payload: error})
   }
