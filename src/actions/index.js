@@ -53,4 +53,5 @@ const filterStock = (stock="actives") => async(dispatch) => {
     dispatch({ type: FILTER_STOCK_FAILURE, payload: error });
   }
 };
+
 export { fetchStock, fetchCompanies, fetchForex, filterStock };

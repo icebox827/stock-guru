@@ -60,4 +60,5 @@ const Stock = () => {
     </Flex>
   )
 };
+
 export default Stock;
