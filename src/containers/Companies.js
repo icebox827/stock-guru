@@ -1,105 +1,105 @@
-import {Flex} from "@chakra-ui/react";
-import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchCompanies} from "../actions/index";
-import {Card} from "react-bootstrap";
-import {useParams} from "react-router";
+/* eslint-disable sort-imports */
+import { Flex } from '@chakra-ui/react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Card } from 'react-bootstrap';
+import { useParams } from 'react-router';
+import { fetchCompanies } from '../actions/index';
 
-function Companies () {
+function Companies() {
+  const dispatch = useDispatch();
+  const { companies, loading, error } = useSelector((state) => state.companies);
+  const { ticker } = useParams();
 
-    const dispatch = useDispatch(),
-        {companies, loading, error} = useSelector((state) => state.companies),
-        {ticker} = useParams();
+  useEffect(
+    () => {
+      dispatch(fetchCompanies(ticker));
+    },
+    [dispatch],
+  );
 
-    useEffect(
-        () => {
+  const renderCompanies = () => {
+    if (loading) {
+      return (
+        <h1>
+          Loading data...
+        </h1>
+      );
+    }
+    if (error) {
+      // eslint-disable-next-line no-extra-parens
+      return (
+        <h1>
+          Error try again!
+        </h1>
+      );
+    }
 
-            dispatch(fetchCompanies(ticker));
+    return companies.map((company) => (
+      <Card
+        className="bg-dark text-white mt-3"
+        key={company.symbol}
+        style={{ width: '21rem' }}
+      >
+        <Card.Body className="border-bottom">
+          <Card.Title className="symbol">
+            {company.symbol}
+          </Card.Title>
 
-        },
-        [dispatch]
-    );
+          <Card.Subtitle className="companyName">
+            {company.companyName}
+          </Card.Subtitle>
 
-    const renderCompanies = () => {
-
-        if (loading) {
-
-            return (<h1>
-Loading data...
-</h1>);
-
-        }
-        if (error) {
-
-            return (<h1>
-Error try again!
-</h1>)
-
-        }
-
-        return companies.map((company) => <Card className='bg-dark text-white mt-3'
-key={company.symbol}
-style={{ width: '21rem' }}>
-                <Card.Body className="border-bottom">
-              <Card.Title className="symbol">
-                        {company.symbol}
-                    </Card.Title>
-
-              <Card.Subtitle className="companyName">
-                        {company.companyName}
-                    </Card.Subtitle>
-
-                    <Card.Text className="companyText">
-              <span className="profit">
-                            Sector :
-{" "}
-                        </span>
-
-                        {company.sector}
-
-              <br />
-
-                        <span className="info">
-                Industry :
-{" "}
+          <Card.Text className="companyText">
+            <span className="profit">
+              Sector :
+              {' '}
             </span>
 
-              {company.industry}
+            {company.sector}
 
-              <br />
+            <br />
 
-              <span className="info">
-                Exchange :
-{" "}
+            <span className="info">
+              Industry :
+              {' '}
             </span>
 
-                        {company.exchangeShortName}
+            {company.industry}
 
-                        <br />
+            <br />
 
-              <span className="info">
-                Country :
-{" "}
-                        </span>
+            <span className="info">
+              Exchange :
+              {' '}
+            </span>
 
-                        {company.country}
+            {company.exchangeShortName}
+
+            <br />
+
+            <span className="info">
+              Country :
+              {' '}
+            </span>
+
+            {company.country}
           </Card.Text>
-          </Card.Body>
-            </Card>);
+        </Card.Body>
+      </Card>
+    ));
+  };
 
-    };
-
-    return (
-        <Flex
-            display="flex"
-            w="100%"
-            wrap="wrap"
-        >
-            {renderCompanies()}
-            ;
-        </Flex>
-    );
-
+  return (
+    <Flex
+      display="flex"
+      w="100%"
+      wrap="wrap"
+    >
+      {renderCompanies()}
+      ;
+    </Flex>
+  );
 }
 
 export default Companies;

@@ -1,44 +1,40 @@
 /* eslint-disable sort-keys */
 /* eslint-disable default-param-last */
 import {
-    FETCH_STOCK_FAILURE,
-    FETCH_STOCK_REQUEST,
-    FETCH_STOCK_SUCCESS
-} from "../actions/action";
+  FETCH_STOCK_FAILURE,
+  FETCH_STOCK_REQUEST,
+  FETCH_STOCK_SUCCESS,
+} from '../actions/action';
 
 const INITIAL_STATE = {
-        "error": null,
-        "loading": false,
-        "stocks": []
-    },
+  error: null,
+  loading: false,
+  stocks: [],
+};
 
-    stockReducer = (state = INITIAL_STATE, action) => {
-
-        switch (action.type) {
-
-        case FETCH_STOCK_REQUEST:
-            return {
-                ...state,
-                "loading": true,
-                "error": null
-            };
-        case FETCH_STOCK_SUCCESS:
-            return {
-                ...state,
-                "loading": false,
-                "stocks": action.payload
-            };
-        case FETCH_STOCK_FAILURE:
-            return {
-                ...state,
-                "loading": false,
-                "error": action.payload
-            };
-        default:
-            return state;
-
-        }
-
-    };
+const stockReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case FETCH_STOCK_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case FETCH_STOCK_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        stocks: action.payload,
+      };
+    case FETCH_STOCK_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 export default stockReducer;
