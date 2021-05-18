@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Jumbotron } from 'react-bootstrap';
 import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBearish, FcBullish } from 'react-icons/fc';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
 import { fetchStockItem } from '../actions/index';
