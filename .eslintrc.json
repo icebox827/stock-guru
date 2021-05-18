@@ -14,7 +14,9 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "eslint:recommended"
+    "eslint:recommended",
+    "eslint:all", 
+    "plugin:react/all"
   ],
   "plugins": ["react"],
   "rules": {
