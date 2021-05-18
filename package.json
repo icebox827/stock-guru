@@ -54,7 +54,6 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "8",
-    "eslint": "4.x"
+    "babel-eslint": "^10.1.0"
   }
 }
