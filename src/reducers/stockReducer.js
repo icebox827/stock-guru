@@ -5,10 +5,10 @@ import {
 } from "../actions/action";
 
 const INITIAL_STATE = {
-        "stocks": [],
-        "loading": false,
-        "error": null
-    },
+  "error": null
+  "loading": false,
+  "stocks": [],
+},
 
     stockReducer = (state = INITIAL_STATE, action) => {
 
