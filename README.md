@@ -1,36 +1,25 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Catalogue of statistics
+# React Bookstore
 
-> This is a catalogue of statistics built with React and Redux. In this project we are display stock market information
-using the financial modeling prep API to fetch real stock market data.
-
-## Screenshot
-
-![SCREENSHOT](app_screenshot.png)
+> This is a a bookstore built with React and Redux
 
 ## :red_circle: Live Demo
 
-[Live Demo Link](https://stock-guru.herokuapp.com/)
-
-## :red_circle: Presentation video
-
-[Video](https://gist.github.com/icebox827/27364bbde42e207b5018155369fbe422)
+[Live Demo Link](https://denis-react-bookstore.herokuapp.com/)
 
 ## :hammer: Built with
 
 - React
 - React routes
 - React-Redux
-- FMP API
-- Heroku
 - Redux
 - HTML5
 - CSS3
 - JSX
 - JavaScript
 - Linters
-- yarn
+- npm
 - VS code
 
 ## :construction_worker: Getting Started
@@ -40,8 +29,8 @@ To get a local copy up and running follow these simple steps:
 1. Go to the [repository page](https://github.com/icebox827/bookstore/).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
-4. run `yarn install`
-5. run `yarn run start`
+4. run `npm install`
+5. run `npm run start`
 
 ## Author
 
@@ -55,7 +44,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/icebox827/stock-guru/issues/1).
+Feel free to check the [issues page](https://github.com/icebox827/bookstore/issues/1).
 
 ## Show your support
 
