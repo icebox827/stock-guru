@@ -1,6 +1,5 @@
-/* eslint-disable func-style */
 import React from 'react';
-// eslint-disable-next-line sort-imports
+// eslint-disable-next-line no-unused-vars
 import { ChakraProvider, chakra } from '@chakra-ui/react';
 import Routes from './Routes';
 

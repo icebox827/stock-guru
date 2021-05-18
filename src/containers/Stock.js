@@ -1,3 +1,6 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable import/no-extraneous-dependencies */
 import { Flex } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
