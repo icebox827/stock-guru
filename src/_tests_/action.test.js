@@ -1,13 +1,13 @@
-import * as actions from '../actions/actions';
+import * as actions from '../actions/action';
 
 describe('Evaluate stock actions', () => {
-  test('stockRequest should not return an empty action type', () => {
-    const action = actions.stockRequest();
+  test('fetchStock should not return an empty action type', () => {
+    const action = actions.fetchStock();
     expect(action.type).not.toBe('');
   });
 
-  test('stockRequest should return the correct action type', () => {
-    const action = actions.stockRequest();
+  test('fetchStock should return the correct action type', () => {
+    const action = actions.fetchStock();
     expect(action.type).toBe('FETCH_STOCK_REQUEST');
   });
 
