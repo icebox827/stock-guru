@@ -1,7 +1,9 @@
 import {Flex} from "@chakra-ui/react";
 import {useEffect} from "react";
+// eslint-disable-next-line sort-imports
 import {useDispatch, useSelector} from "react-redux";
 import {fetchForex} from "../actions/index";
+// eslint-disable-next-line sort-imports
 import {Card} from "react-bootstrap";
 
 function Forex () {
@@ -37,7 +39,7 @@ Error try again!
 
         return forex.map((fx) => <Card className='bg-dark text-white mt-3'
 key={fx.ticker}
-style={{ width: '21rem' }}>
+style={{width: '21rem'}}>
                 <Card.Body>
               <Card.Title className="ticker">
                         <h2>
@@ -47,34 +49,42 @@ style={{ width: '21rem' }}>
 
                     <Card.Text className="forexText">
               <h3>
-                            Bid :{fx.bid}
+                            Bid :
+{fx.bid}
                         </h3>
 
               <h3>
-                Ask :{fx.ask}
+                Ask :
+{fx.ask}
             </h3>
 
                         <h3>
-                Open:{fx.open}
+                Open:
+{fx.open}
             </h3>
 
                         <h3>
-                Low:{fx.low}</h3>
+                Low:
+{fx.low}
+</h3>
 
                         <h3>
-                High:{fx.high}
+                High:
+{fx.high}
             </h3>
 
                         <h6>
-                Changes:{fx.changes}
+                Changes:
+{fx.changes}
             </h6>
 
               <h5>
-                Date:{fx.date}
+                Date:
+{fx.date}
             </h5>
           </Card.Text>
           </Card.Body>
-            </Card>);
+        </Card>);
 
     };
 

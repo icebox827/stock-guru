@@ -1,3 +1,5 @@
+/* eslint-disable default-param-last */
+/* eslint-disable sort-keys */
 import {
     FETCH_STOCK_ITEM_FAILURE,
     FETCH_STOCK_ITEM_REQUEST,
