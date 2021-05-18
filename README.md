@@ -2,31 +2,37 @@
 
 # React Bookstore
 
-> This is a a bookstore built with React and Redux
+> This is a Catologue of Statistics app
 
 ## :red_circle: Live Demo
 
-[Live Demo Link](https://denis-react-bookstore.herokuapp.com/)
+[Live Demo Link](https://stock-guru.herokuapp.com/)
+
+## :red_circle: Video
+
+[video Link](https://gist.github.com/icebox827/27364bbde42e207b5018155369fbe422)
 
 ## :hammer: Built with
 
 - React
 - React routes
 - React-Redux
+- fmp API
+- Heroku
 - Redux
 - HTML5
 - CSS3
 - JSX
 - JavaScript
 - Linters
-- npm
+- yarn
 - VS code
 
 ## :construction_worker: Getting Started
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/icebox827/bookstore/).
+1. Go to the [repository page](https://github.com/icebox827/stock-guru/).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
 4. run `npm install`
