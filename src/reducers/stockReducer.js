@@ -1,38 +1,38 @@
 import {
   FETCH_STOCK_REQUEST,
   FETCH_STOCK_SUCCESS,
-  FETCH_STOCK_FAILURE,
-} from '../actions/action';
+  FETCH_STOCK_FAILURE
+} from '../actions/action'
 
 const INITIAL_STATE = {
   stocks: [],
   loading: false,
-  error: null,
-};
+  error: null
+}
 
 const stockReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case FETCH_STOCK_REQUEST:
       return {
         ...state,
         loading: true,
-        error: null,
-      };
+        error: null
+      }
     case FETCH_STOCK_SUCCESS:
       return {
         ...state,
         loading: false,
-        stocks: action.payload,
-      };
+        stocks: action.payload
+      }
     case FETCH_STOCK_FAILURE:
       return {
         ...state,
         loading: false,
-        error: action.payload,
-      };
+        error: action.payload
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default stockReducer;
+export default stockReducer

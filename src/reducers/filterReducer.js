@@ -1,38 +1,38 @@
 import {
   FILTER_STOCK_REQUEST,
   FILTER_STOCK_SUCCESS,
-  FILTER_STOCK_FAILURE,
+  FILTER_STOCK_FAILURE
 } from '../actions/action'
 
 const INITIAL_STATE = {
   filter: [],
   loading: false,
-  errur: null,
+  errur: null
 }
 
 const filterReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case FILTER_STOCK_REQUEST:
       return {
         ...state,
         loading: true,
-        error: null,
-      };
+        error: null
+      }
     case FILTER_STOCK_SUCCESS:
       return {
         ...state,
         loading: false,
-        filter: action.payload,
-      };
+        filter: action.payload
+      }
     case FILTER_STOCK_FAILURE:
       return {
         ...state,
         loading: false,
-        error: action.payload,
-      };
+        error: action.payload
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default filterReducer;
+export default filterReducer

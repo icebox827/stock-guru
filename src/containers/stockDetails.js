@@ -1,73 +1,73 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchStockItem } from '../actions/index';
-import { Jumbotron, Container } from 'react-bootstrap';
-import { BsFillForwardFill } from 'react-icons/bs';
-import { FcBullish, FcBearish } from 'react-icons/fc';
-import PropTypes from 'prop-types';
-import { useParams } from 'react-router';
+import React, { useEffect } from 'react'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchStockItem } from '../actions/index'
+import { Jumbotron, Container } from 'react-bootstrap'
+import { BsFillForwardFill } from 'react-icons/bs'
+import { FcBullish, FcBearish } from 'react-icons/fc'
+import PropTypes from 'prop-types'
+import { useParams } from 'react-router'
 
 const StockDetail = () => {
-  const dispatch = useDispatch();
-  const { stockItem, loading, error } = useSelector((state) => state.stockItem);
-  const { ticker } = useParams();
+  const dispatch = useDispatch()
+  const { stockItem, loading, error } = useSelector((state) => state.stockItem)
+  const { ticker } = useParams()
 
   console.log(ticker)
 
   useEffect(() => {
-    dispatch(fetchStockItem(ticker));
-  },[dispatch])
+    dispatch(fetchStockItem(ticker))
+  }, [dispatch])
 
-  if (loading) return <h1>Loading data...</h1>;
-  if (error) return <h1>Error try again!</h1>;
+  if (loading) return <h1>Loading data...</h1>
+  if (error) return <h1>Error try again!</h1>
 
   return (
     <div>
       <Jumbotron fluid>
         <Container>
-          <h1 className="shadow-sm pb-2 mb-3">
-            { stockItem.symbol }
-            <small className="priceChange">
-              <BsFillForwardFill color="transparent" />
+          <h1 className='shadow-sm pb-2 mb-3'>
+            {stockItem.symbol}
+            <small className='priceChange'>
+              <BsFillForwardFill color='transparent' />
               Price:
               {' '}
-              { stockItem.price }
-              <BsFillForwardFill color="transparent" />
+              {stockItem.price}
+              <BsFillForwardFill color='transparent' />
               Price change:
               {' '}
-              <span className={`${stockItem.changes > 0 ? 'text-success' : 'text-danger'}`}>{ stockItem.changes }</span>
-              <BsFillForwardFill color="transparent" />
+              <span className={`${stockItem.changes > 0 ? 'text-success' : 'text-danger'}`}>{stockItem.changes}</span>
+              <BsFillForwardFill color='transparent' />
               {stockItem.changes > 0 ? <FcBullish size={40} /> : <FcBearish size={40} />}
             </small>
           </h1>
-          <h2 className="text-center text-success">
-            <BsFillForwardFill color="transparent" />
+          <h2 className='text-center text-success'>
+            <BsFillForwardFill color='transparent' />
             CEO:
             {' '}
-            { stockItem.ceo }
+            {stockItem.ceo}
           </h2>
-          <h4 className="text-center text-success">
-            { stockItem.companyName }
-            <BsFillForwardFill color="transparent" />
+          <h4 className='text-center text-success'>
+            {stockItem.companyName}
+            <BsFillForwardFill color='transparent' />
             <small>
               Industry:
-              { stockItem.industry }
+              {stockItem.industry}
             </small>
             <hr />
           </h4>
-          <p className="lead text-justify readMaxLength">
+          <p className='lead text-justify readMaxLength'>
             <img
               src={stockItem.image}
               alt={stockItem.symbol}
               onError={e => {
-                e.target.src = notFound;
+                e.target.src = notFound
               }}
-              className="float-left m-2 img-thumbnail w-25"
+              className='float-left m-2 img-thumbnail w-25'
             />
-            { stockItem.description }
+            {stockItem.description}
             <br />
-            <a href={stockItem.website} target="__blank" rel="noopener" className="website">
+            <a href={stockItem.website} target='__blank' rel='noopener' className='website'>
               {' '}
               Visit Website
             </a>
@@ -75,7 +75,7 @@ const StockDetail = () => {
         </Container>
       </Jumbotron>
     </div>
-  );
+  )
 }
 
 StockDetail.propTypes = {
@@ -87,12 +87,12 @@ StockDetail.propTypes = {
     industry: PropTypes.string,
     website: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.string,
-  }),
-};
+    image: PropTypes.string
+  })
+}
 
 StockDetail.defaultProps = {
-  stockItem: {},
-};
+  stockItem: {}
+}
 
-export default StockDetail;
+export default StockDetail
