@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import store from '../redux/store';
+import store from '../store';
 
 describe('The store object', () => {
   it('should validate redux store object', () => {
