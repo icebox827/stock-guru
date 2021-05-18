@@ -53,6 +53,7 @@ Give a ⭐️ if you like this project!
 ### Acknowledgements
 
 - Microverse
+- Financial modelin prep
 
 ## 📝 License
 
