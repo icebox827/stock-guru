@@ -11,15 +11,15 @@ describe('<NavBar />', () => {
     component = render(<MemoryRouter><NavBar /></MemoryRouter>);
   });
 
-  test('There should be a Home button', () => {
+  it('Should be a Stock button', () => {
     component.getByText('Stock');
   });
 
-  test('There should be a Categories button', () => {
+  it('Should be a Company button', () => {
     component.getByText('Company');
   });
 
-  test('There should be a Countries button', () => {
+  it('Should be a Forex button', () => {
     component.getByText('Forex');
   });
 });

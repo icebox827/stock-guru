@@ -27,7 +27,6 @@ function Companies() {
       );
     }
     if (error) {
-      // eslint-disable-next-line no-extra-parens
       return (
         <h1>
           Error try again!
