@@ -6,20 +6,18 @@ import Companies from '../containers/Companies';
 import Forex from '../containers/Forex';
 import StockDetail from '../containers/stockDetails';
 import '../styles/App.css';
-import store from '../store';
 
 function Routes() {
   return (
       <Router>
         <NavBar />
-
         <Switch>
           <Route
             component={Stock}
             exact
             path="/"
           />
-
+          
           <Route
             component={Companies}
             exact
