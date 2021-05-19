@@ -97,9 +97,6 @@ function StockDetail() {
             <img
               alt={stockItem.symbol}
               className="float-left m-2 img-thumbnail w-25"
-              onError={(e) => {
-                e.target.src = notFound;
-              }}
               src={stockItem.image}
             />
 
