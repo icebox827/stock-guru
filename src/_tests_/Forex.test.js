@@ -6,5 +6,5 @@ import { Card } from 'react-bootstrap';
 describe('Forex component', () => {
   it('Should render Card', () => {
     render(<Card />)
-  })
+  });
 });
