@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import NavBar from '../containers/NavBar';
 import Stock from '../containers/Stock';
@@ -11,7 +10,6 @@ import store from '../store';
 
 function Routes() {
   return (
-    <Provider store={store}>
       <Router>
         <NavBar />
 
@@ -41,7 +39,7 @@ function Routes() {
           />
         </Switch>
       </Router>
-    </Provider>
+    
   );
 }
 
