@@ -1,5 +1,3 @@
-/* eslint-disable sort-keys */
-/* eslint-disable sort-imports */
 import { combineReducers } from 'redux';
 import stockReducer from './stockReducer';
 import companyReducer from './companyReducer';

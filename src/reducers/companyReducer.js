@@ -1,5 +1,3 @@
-/* eslint-disable sort-keys */
-/* eslint-disable default-param-last */
 import {
   FETCH_COMPANIES_FAILURE,
   FETCH_COMPANIES_REQUEST,

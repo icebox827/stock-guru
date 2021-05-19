@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys */
 import {
   FETCH_FOREX_FAILURE,
   FETCH_FOREX_REQUEST,
@@ -8,11 +7,9 @@ import {
 const INITIAL_STATE = {
   forex: [],
   loading: false,
-  // eslint-disable-next-line sort-keys
   error: null,
 };
 
-// eslint-disable-next-line default-param-last
 const forexReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_FOREX_REQUEST:

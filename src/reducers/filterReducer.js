@@ -1,5 +1,3 @@
-/* eslint-disable sort-keys */
-/* eslint-disable default-param-last */
 import {
   FILTER_STOCK_FAILURE,
   FILTER_STOCK_REQUEST,
