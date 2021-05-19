@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-no-literals */
-/* eslint-disable react/forbid-component-props */
-/* eslint-disable func-style */
-/* eslint-disable react/jsx-max-depth */
 import {
   Box, Grid, Menu, MenuItem,
 } from '@chakra-ui/react';
@@ -13,7 +9,6 @@ function NavBar() {
       <Grid templateColumns="repeat(3, 1fr)">
         <Box bg="brown">
           <MenuItem
-                        // eslint-disable-next-line react/forbid-component-props
             className="link"
             color="white"
           >
