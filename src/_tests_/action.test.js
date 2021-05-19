@@ -1,15 +1,10 @@
 import * as actions from '../actions/action';
 
-describe(
-  'Evaluate stockRequest',
-  () => {
-    it(
-      'Should not be an empty object',
-      () => {
-        const action = actions.stockRequest;
-        expect(action).not.toBe('');
-      },
-    );
+describe('Evaluate stockRequest',() => {
+    it('should not return an empty object', () => {
+      const action = actions.FETCH_STOCK_REQUEST;
+      expect(action.type).not.toBe('');
+    });
     it('Should return stock request', () => {
       const action = actions.FETCH_STOCK_REQUEST;
       expect(action).toBe('FETCH_STOCK_REQUEST');
