@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-max-depth */
-/* eslint-disable func-style */
-/* eslint-disable sort-imports */
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
