@@ -1,4 +1,3 @@
-/* eslint-disable sort-imports */
 import { Flex } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

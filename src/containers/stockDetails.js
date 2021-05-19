@@ -98,7 +98,6 @@ function StockDetail() {
               alt={stockItem.symbol}
               className="float-left m-2 img-thumbnail w-25"
               onError={(e) => {
-                // eslint-disable-next-line no-undef
                 e.target.src = notFound;
               }}
               src={stockItem.image}
