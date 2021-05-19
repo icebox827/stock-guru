@@ -1,10 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import { useEffect } from 'react';
-// eslint-disable-next-line sort-imports
 import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
 import { fetchForex } from '../actions/index';
-// eslint-disable-next-line sort-imports
 
 function Forex() {
   const dispatch = useDispatch();
