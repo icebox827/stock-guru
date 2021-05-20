@@ -41,8 +41,15 @@ To get a local copy up and running follow these simple steps:
 1. Go to the [repository page](https://github.com/icebox827/stock-guru/).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
-4. run `yarn install`
-5. run `yarn run start`
+4. Run `yarn install`
+5. Run `yarn run start`
+
+## :construction_worker: Test
+
+To test the application:
+
+1. Open a console.
+2. Run `yarn test`
 
 ## Author
 

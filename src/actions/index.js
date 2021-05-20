@@ -90,7 +90,6 @@ const fetchStockItem = (ticker) => async (dispatch) => {
     const data = await response.json();
     dispatch({
       type: FETCH_STOCK_ITEM_SUCCESS,
-      // eslint-disable-next-line no-magic-numbers
       payload: data[0],
     });
   } catch (error) {

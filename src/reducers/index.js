@@ -5,12 +5,14 @@ import forexReducer from './forexReducer';
 import filterReducer from './filterReducer';
 import stockItemReducer from './stockItemReducer';
 
+
 const allReducers = combineReducers({
   stocks: stockReducer,
   companies: companyReducer,
   forex: forexReducer,
   filter: filterReducer,
   stockItem: stockItemReducer,
+ 
 });
 
 export default allReducers;
