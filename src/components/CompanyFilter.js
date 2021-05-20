@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const CompanyFilter = () => {
+const StockFilter = () => {
   const filters = ['All', 'NASDAQ', 'NYSE'];
 };
 
-export default CompanyFilter;
+export default StockFilter;

@@ -14,7 +14,6 @@ import {
   FILTER_STOCK_FAILURE,
   FILTER_STOCK_REQUEST,
   FILTER_STOCK_SUCCESS,
-  FILTER_COMPANY,
 } from './action';
 
 const fetchStock = () => async (dispatch) => {
@@ -100,11 +99,6 @@ const fetchStockItem = (ticker) => async (dispatch) => {
   }
 };
 
-const filterCompany = filter => ({
-  type: FILTER_COMPANY,
-  payload: filter,
-});
-
 export {
-  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, filterCompany,
+  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, 
 };
