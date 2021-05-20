@@ -4,27 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { filterStock } from '../actions/index';
-
-const filters = [
-  'actives',
-  'gainers',
-  'losers',
-];
+import StockFilter from '../components/StockFilter';
 
 function Stock() {
   const dispatch = useDispatch();
   const { filter, loading, error } = useSelector((state) => state.filter);
-  const selectedstocks = filters.map((filter) => (
-    <option
-      key={filter}
-      value={filter}
-    >
-      {filter}
-    </option>
-  ));
 
-  const handleChange = (e) => {
-    dispatch(filterStock(e.target.value));
+  const handleChange = (filter) => {
+    dispatch(filterStock(filter));
   };
 
   useEffect(
@@ -55,29 +42,8 @@ function Stock() {
       w="100%"
       wrap="wrap"
     >
-      <form
-        className="form-flex"
-        id="form"
-      >
-        <fieldset>
-          <legend>
-            Filter Stock
-          </legend>
 
-          <label className="form-label">
-            Select a category
-          </label>
-
-          <select
-            className="category-field"
-            id="category"
-            name="category"
-            onChange={handleChange}
-          >
-            {selectedstocks}
-          </select>
-        </fieldset>
-      </form>
+    <StockFilter filterChange={handleChange} />
 
       {
                 filter.map((stock) => (
