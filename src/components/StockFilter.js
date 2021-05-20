@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const StockFilter = ({filterChange}) => {
-  const filters = ['actives', 'gainers', 'losers'];
+  const filters = ['All', 'actives', 'gainers', 'losers'];
 
   const selectedstocks = filters.map(filter => (
-    <option key={filter} value={filter === 'actives'? '' : filter}>
+    <option key={filter} value={filter === 'All'? '' : filter}>
       {filter}
     </option>
   ));
