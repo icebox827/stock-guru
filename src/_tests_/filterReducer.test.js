@@ -8,9 +8,9 @@ describe('filter reducer', () => {
   });
 
   it('Should return new state if a valid filter is provide', () => {
-    const action = filterStock({ filter: 'Action'});
+    const action = filterStock({ filter: 'Action' });
     const state = filterReducer(undefined, action);
 
-    expect(state).toEqual(filter)
+    expect(state).toEqual({"errur": null, "filter": [], "loading": false});
   });
 });
