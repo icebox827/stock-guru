@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const newsReducers = (state = INITIAL_STATE, action) => {
+const newsReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case FETCH_NEWS_REQUEST:
       return {
@@ -35,4 +35,4 @@ const newsReducers = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default newsReducers;
+export default newsReducer;
