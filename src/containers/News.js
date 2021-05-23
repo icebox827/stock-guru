@@ -38,29 +38,30 @@ function News () {
     }
 
     return news.map((nws) => (
-      <Jumbotron key={nws.symbol}>
+      <Jumbotron key={nws.symbol} className="jumbotron">
         <Container>
-          <row>
-          <Col md={4}>
+          <Row className="content">
+            <Col md={4} className="left">
               {' '}
-              <img src={news.image} className="img-fluid img-thumbnail rounded" alt="" />
+              <img src={nws.image} className="img-fluid img-thumbnail rounded image" alt="" />
             </Col>
-            <Col md={8}>
-              <h1>{news.symbol}</h1>
-              <h4>{news.title}</h4>
+            <Col md={8} className="right">
+              <h1 className="symbol">{nws.symbol}</h1>
+              <h4 className="title">{nws.title}</h4>
               <small className="text-muted">
                 published:
-                {news.publishedDate}
+                {nws.publishedDate}
               </small>
               <hr />
               <p className="lead">
-                {news.text}
+                {nws.text}
                 <br />
-                <a href={news.url} className="text-light btn btn-success mt-2" target="__blank" rel="noopener"> Read more</a>
+                <a href={nws.url} className="text-light btn btn-success mt-2" target="__blank" rel="noopener"> Read more</a>
               </p>
             </Col>
-          </row>
+          </Row>
         </Container>
+        <hr />
       </Jumbotron>
     ))
 };
