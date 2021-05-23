@@ -6,6 +6,7 @@ import Companies from '../containers/Companies';
 import Forex from '../containers/Forex';
 import StockDetail from '../containers/stockDetails';
 import News from '../containers/News';
+import Footer from '../containers/Footer';
 import '../styles/App.css';
 
 function Routes() {
@@ -43,6 +44,7 @@ function Routes() {
             path="/news"
           />
         </Switch>
+        <Footer />
       </Router>
     
   );
