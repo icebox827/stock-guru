@@ -14,6 +14,9 @@ import {
   FILTER_STOCK_FAILURE,
   FILTER_STOCK_REQUEST,
   FILTER_STOCK_SUCCESS,
+  FETCH_NEWS_FAILURE,
+  FETCH_NEWS_SUCCESS,
+  FETCH_NEWS_REQUEST,
 } from './action';
 
 const fetchStock = () => async (dispatch) => {
@@ -99,6 +102,23 @@ const fetchStockItem = (ticker) => async (dispatch) => {
   }
 };
 
+const fetchNews = () => async (dispatch) => {
+  dispatch({ type: FETCH_NEWS_REQUEST });
+  try {
+    const response = await fetch('https://financialmodelingprep.com/api/v3/stock_news?limit=50&apikey=71692019ce2067a12139d5ef9415ecdb');
+    const data = await response.json();
+    dispatch({
+      type: FETCH_NEWS_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: FETCH_NEWS_FAILURE,
+      payload: error,
+    })
+  }
+};
+
 export {
-  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, 
+  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, fetchNews,
 };
