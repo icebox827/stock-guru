@@ -79,6 +79,16 @@ function News () {
       </Card>
     })
   };
+
+  return (
+    <Flex
+      display="flex"
+      w="100%"
+      wrap="wrap"
+    >
+      {renderNews()}
+    </Flex>
+  );
 };
 
 export default News;
