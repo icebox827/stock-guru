@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <Menu>
-      <Grid templateColumns="repeat(3, 1fr)">
+      <Grid templateColumns="repeat(4, 1fr)">
         <Box bg="brown">
           <MenuItem
             className="link"
@@ -41,6 +41,19 @@ function NavBar() {
             <Link to="/forex">
               <h3>
                 Forex
+              </h3>
+            </Link>
+          </MenuItem>
+        </Box>
+
+        <Box bg="brown">
+          <MenuItem
+            className="link"
+            color="white"
+          >
+            <Link to="/news">
+              <h3>
+                News
               </h3>
             </Link>
           </MenuItem>

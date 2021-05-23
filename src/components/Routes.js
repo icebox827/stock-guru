@@ -5,6 +5,7 @@ import Stock from '../containers/Stock';
 import Companies from '../containers/Companies';
 import Forex from '../containers/Forex';
 import StockDetail from '../containers/stockDetails';
+import News from '../containers/News';
 import '../styles/App.css';
 
 function Routes() {
