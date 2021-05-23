@@ -43,7 +43,7 @@ function News () {
           <Row className="content">
             <Col md={4} className="left">
               {' '}
-              <img src={nws.image} className="img-fluid img-thumbnail rounded image" alt="" />
+              <img src={nws.image} className="img-fluid img-thumbnail rounded image" alt="Stock News" />
             </Col>
             <Col md={8} className="right">
               <h1 className="symbol">{nws.symbol}</h1>
