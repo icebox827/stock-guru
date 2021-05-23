@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
+import Proptypes from 'prop-types';
 import { fetchNews } from '../actions/index';
 
 function News () {
@@ -31,7 +32,7 @@ function News () {
       );
     }
 
-    return news.map((nws) => {
+    return news.map((nws) => (
       <Card
         className="bg-dark text-white mt-3"
         key={nws.symbol}
@@ -77,7 +78,7 @@ function News () {
           </Card.Text>
         </Card.Body>
       </Card>
-    })
+    ));
   };
 
   return (
