@@ -1,6 +1,7 @@
 import { Flex, GridItem } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import { fetchNews } from '../actions/index';
 import Loader from '../components/Loader';
@@ -90,6 +91,21 @@ function News () {
       {renderNews()}
     </Flex>
   );
+};
+
+News.propTypes = {
+  news: PropTypes.shape({
+    image: PropTypes.string,
+    symbol: PropTypes.string,
+    title: PropTypes.string,
+    publishedDate: PropTypes.string,
+    text: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};
+
+News.defaultProps = {
+  news: {},
 };
 
 export default News;
