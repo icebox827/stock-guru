@@ -1,9 +1,10 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, GridItem } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { fetchCompanies } from '../actions/index';
+import Loader from '../components/Loader';
 
 function Companies() {
   const dispatch = useDispatch();
@@ -20,9 +21,9 @@ function Companies() {
   const renderCompanies = () => {
     if (loading) {
       return (
-        <h1>
-          Loading data...
-        </h1>
+        <GridItem colSpan={4}>
+          <Loader />
+        </GridItem>
       );
     }
     if (error) {

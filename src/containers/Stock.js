@@ -1,10 +1,11 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, GridItem } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { filterStock } from '../actions/index';
 import StockFilter from '../components/StockFilter';
+import Loader from '../components/Loader';
 
 function Stock() {
   const dispatch = useDispatch();
@@ -23,9 +24,9 @@ function Stock() {
 
   if (loading) {
     return (
-      <h1>
-        Loading data...
-      </h1>
+      <GridItem colSpan={4}>
+        <Loader />
+      </GridItem>
     );
   }
   if (error) {
