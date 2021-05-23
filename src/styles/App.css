@@ -108,3 +108,7 @@ option {
 .jumbotron {
   margin: 25px;
 }
+
+.footer {
+  background-color: brown;
+}
