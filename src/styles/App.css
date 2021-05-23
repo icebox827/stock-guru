@@ -110,5 +110,10 @@ option {
 }
 
 .footer {
-  background-color: brown;
+  background-color: blue;
+  height: 3rem;
+}
+
+.container-footer {
+  color: white;
 }

@@ -1,15 +1,18 @@
 import React from 'react';
+import { Center } from '@chakra-ui/react';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
+    <Center className="footer">
+       <footer>
+      <div className="container-footer">
         <span className="text-muted">
           &copy;
-          { ` ${(new Date()).getFullYear()} All rights reserved | Built with love by Denis Lafontant.`}
+          { ` ${(new Date()).getFullYear()} All rights reserved | Built with love by: Denis Lafontant.`}
         </span>
       </div>
     </footer>
+    </Center>
   )
 };
 
