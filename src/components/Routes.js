@@ -36,6 +36,12 @@ function Routes() {
             exact
             path="/stockDetail/:ticker"
           />
+
+          <Route 
+            component={News}
+            exact
+            path="/news"
+          />
         </Switch>
       </Router>
     
