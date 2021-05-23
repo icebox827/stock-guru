@@ -3,9 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Jumbotron } from 'react-bootstrap';
 import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBearish, FcBullish } from 'react-icons/fc';
+import { GridItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
 import { fetchStockItem } from '../actions/index';
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 function StockDetail() {
   const dispatch = useDispatch();
@@ -23,16 +26,16 @@ function StockDetail() {
 
   if (loading) {
     return (
-      <h1>
-        Loading data...
-      </h1>
+      <GridItem colSpan={4}>
+        <Loader />
+      </GridItem>
     );
   }
   if (error) {
     return (
-      <h1>
-        Error try again!
-      </h1>
+      <GridItem colSpan="4">
+        <Error />
+      </GridItem>
     );
   }
 

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { filterStock } from '../actions/index';
 import StockFilter from '../components/StockFilter';
 import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 function Stock() {
   const dispatch = useDispatch();
@@ -31,9 +32,9 @@ function Stock() {
   }
   if (error) {
     return (
-      <h1>
-        Error try again!
-      </h1>
+      <GridItem colSpan="4">
+        <Error />
+      </GridItem>
     );
   }
 

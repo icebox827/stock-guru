@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { fetchCompanies } from '../actions/index';
 import Loader from '../components/Loader';
+import Error from '../components/Error'
 
 function Companies() {
   const dispatch = useDispatch();
@@ -28,9 +29,9 @@ function Companies() {
     }
     if (error) {
       return (
-        <h1>
-          Error try again!
-        </h1>
+        <GridItem colSpan="4">
+          <Error />
+        </GridItem>
       );
     }
 

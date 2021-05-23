@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
 import { fetchForex } from '../actions/index';
 import Loader from '../components/Loader';
+import Error from '../components/Error'
 
 function Forex() {
   const dispatch = useDispatch();
@@ -26,9 +27,9 @@ function Forex() {
     }
     if (error) {
       return (
-        <h1>
-          Error try again!
-        </h1>
+        <GridItem colSpan="4">
+          <Error />
+        </GridItem>
       );
     }
 

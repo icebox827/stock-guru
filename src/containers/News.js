@@ -8,6 +8,7 @@ import {
   Jumbotron, Container, Row, Col,
 } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import Error from '../components/Error';
 
 function News () {
   const dispatch = useDispatch();
@@ -31,9 +32,9 @@ function News () {
     }
     if (error) {
       return (
-        <h1>
-          Error try again!
-        </h1>
+        <GridItem colSpan="4">
+          <Error />
+        </GridItem>
       );
     }
 
