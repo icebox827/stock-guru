@@ -1,23 +1,27 @@
-import { Flex, GridItem } from '@chakra-ui/react';
+import { GridItem } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
 import { fetchNews } from '../actions/index';
 import Loader from '../components/Loader';
+import {
+  Jumbotron, Container, Row, Col,
+} from 'react-bootstrap';
+import { useParams } from 'react-router';
 
 function News () {
   const dispatch = useDispatch();
   const { news, loading, error } = useSelector((state) => state.news);
+  const { symbol } = useParams();
 
   useEffect(
     () => {
-      dispatch(fetchNews());
+      dispatch(fetchNews(symbol));
     },
     [dispatch]
   );
 
-  const renderNews = () => {
+ 
     if (loading) {
       return (
        <GridItem colSpan={4}>
@@ -34,63 +38,31 @@ function News () {
     }
 
     return news.map((nws) => (
-      <Card
-        className="bg-dark text-white mt-3"
-        key={nws.symbol}
-        style={{ width: '50rem' }}
-      >
-        <Card.Body>
-          <Card.Title className="symbol">
-            <h2>
-              {nws.symbol}
-            </h2>
-          </Card.Title>
-          <Card.Subtitle>
-            <h3>
-              {nws.title}
-            </h3>
-          </Card.Subtitle>
-          <Card.Img>
-            {nws.image}
-          </Card.Img>
-          <Card.Text>
-            <h5>
-            {nws.text}
-            </h5>
-            
-            <h6>
-              Site: 
-              {nws.site}
-              <br />
-              <a
-              className="website"
-              href={nws.url}
-              rel="noopener"
-              target="__blank"
-            >
+      <Jumbotron key={nws.symbol}>
+        <Container>
+          <row>
+          <Col md={4}>
               {' '}
-              Visit Website
-            </a>
-            </h6>
-            <h6>
-              date:
-              {nws.publishedDate}
-            </h6>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    ));
-  };
-
-  return (
-    <Flex
-      display="flex"
-      w="100%"
-      wrap="wrap"
-    >
-      {renderNews()}
-    </Flex>
-  );
+              <img src={news.image} className="img-fluid img-thumbnail rounded" alt="" />
+            </Col>
+            <Col md={8}>
+              <h1>{news.symbol}</h1>
+              <h4>{news.title}</h4>
+              <small className="text-muted">
+                published:
+                {news.publishedDate}
+              </small>
+              <hr />
+              <p className="lead">
+                {news.text}
+                <br />
+                <a href={news.url} className="text-light btn btn-success mt-2" target="__blank" rel="noopener"> Read more</a>
+              </p>
+            </Col>
+          </row>
+        </Container>
+      </Jumbotron>
+    ))
 };
 
 News.propTypes = {
