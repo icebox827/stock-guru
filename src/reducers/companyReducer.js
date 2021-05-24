@@ -1,7 +1,7 @@
 import {
+  FETCH_COMPANIES_FAILURE,
   FETCH_COMPANIES_REQUEST,
   FETCH_COMPANIES_SUCCESS,
-  FETCH_COMPANIES_FAILURE,
 } from '../actions/action';
 
 const INITIAL_STATE = {
@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 };
 
 const companyReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case FETCH_COMPANIES_REQUEST:
       return {
         ...state,
@@ -28,7 +28,7 @@ const companyReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        error: action.payload
+        error: action.payload,
       };
     default:
       return state;

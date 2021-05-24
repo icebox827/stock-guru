@@ -87,3 +87,33 @@ option {
   background-color: blue;
   color: white;
 }
+
+.content {
+  display: flex;
+}
+
+.image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.right {
+  padding-left: 20px;
+}
+
+.jumbotron {
+  margin: 25px;
+}
+
+.footer {
+  background-color: blue;
+  height: 3rem;
+}
+
+.container-footer {
+  color: white;
+}
