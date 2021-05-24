@@ -1,5 +1,5 @@
-// gatsby-config.js
+// Gatsby-config.js
 
 module.exports = {
-  plugins: ["@chakra-ui/gatsby-plugin"],
-}
+  plugins: ['@chakra-ui/gatsby-plugin'],
+};
