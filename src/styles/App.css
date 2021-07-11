@@ -79,13 +79,18 @@ option {
 }
 
 .website {
-  background-color: blue;
+  background-color: rgb(155, 62, 62);
   color: white;
 }
 
 .btn {
-  background-color: blue;
+  background-color: rgb(52, 59, 160);
   color: white;
+  text-align: center;
+  display: block;
+  margin: 0  auto;
+  width: 30%;
+  border-radius: 5px;
 }
 
 .content {
@@ -110,7 +115,7 @@ option {
 }
 
 .footer {
-  background-color: blue;
+  background-color: rgb(155, 62, 62);
   height: 3rem;
 }
 
