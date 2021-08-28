@@ -38,7 +38,7 @@ function News () {
       );
     }
 
-    return news.map((nws) => (
+    return news && news.map((nws) => (
       <Jumbotron key={nws.symbol} className="jumbotron">
         <Container>
           <Row className="content">

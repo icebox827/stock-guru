@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <Menu>
-      <Grid templateColumns="repeat(4, 1fr)">
+      <Grid templateColumns="repeat(3, 1fr)">
         <Box bg="brown">
           <MenuItem
             className="link"
@@ -46,7 +46,7 @@ function NavBar() {
           </MenuItem>
         </Box>
 
-        <Box bg="brown">
+        {/* <Box bg="brown">
           <MenuItem
             className="link"
             color="white"
@@ -57,7 +57,7 @@ function NavBar() {
               </h3>
             </Link>
           </MenuItem>
-        </Box>
+        </Box> */}
       </Grid>
     </Menu>
   );
