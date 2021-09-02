@@ -5,7 +5,7 @@ import { fetchBitcoin } from '../actions/index';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { Container } from 'react-bootstrap';
-import { Grid, GridItem, Box } from '@chakra-ui/layout';
+import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -47,7 +47,53 @@ const Home = () => {
           style = {{ backgroundImage: "url(./assets/Bitcoin.png)" }}
         >
           <Box>
-            First grid
+            { bitcoin.map((btc) => (
+              <Text key={btc.synmbol}>
+                Name :
+                {' '}
+                {btc.name}
+                <br/>
+                Exchange :
+                {' '}
+                {btc.exchange}
+                <br/>
+                Price :
+                {' '}
+                $US {btc.price}
+                <br/>
+                Change Percentage :
+                {' '}
+                {btc.changesPercentage}%
+                <br/>
+                Change :
+                {' '}
+                {btc.change}
+                <br/>
+                Day Low :
+                {' '}
+                $US {btc.dayLow}
+                <br/>
+                Day High :
+                {' '}
+                $US {btc.dayHigh}
+                <br/>
+                Market Cao :
+                {' '}
+                {btc.marketCap}
+                <br/>
+                Volume :
+                {' '}
+                {btc.volume}
+                <br/>
+                Open :
+                {' '}
+                $US {btc.open}
+                <br/>
+                Previous Close :
+                {' '}
+                $US {btc.previousClose}
+              </Text>
+            )) }
           </Box>
         </GridItem>
         <GridItem

@@ -105,7 +105,7 @@ const fetchStockItem = (ticker) => async (dispatch) => {
 const fetchBitcoin = () => async (dispatch) => {
   dispatch({ type: FETCH_BITCOIN_REQUEST });
   try {
-    const response = await fetch('https://financialmodelingprep.com/api/v3/historical-chart/1min/BTCUSD?apikey=71692019ce2067a12139d5ef9415ecdb');
+    const response = await fetch('https://financialmodelingprep.com/api/v3/quote/BTCUSD?apikey=71692019ce2067a12139d5ef9415ecdb');
     const data = await response.json();
     dispatch({
       type: FETCH_BITCOIN_SUCCESS,
