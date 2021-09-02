@@ -14,7 +14,7 @@ const Home = () => {
         <GridItem
           rowSpan = {2}
           colSpan = {3}
-          style = {{}}
+          style = {{ backgroundImage: "url(./assets/Bitcoin.png)" }}
         >
           <Box>
             First grid
