@@ -6,13 +6,25 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <Menu>
-      <Grid templateColumns="repeat(3, 1fr)">
+      <Grid templateColumns="repeat(4, 1fr)">
         <Box bg="brown">
           <MenuItem
             className="link"
             color="white"
           >
             <Link to="/">
+              <h3>
+                Home
+              </h3>
+            </Link>
+          </MenuItem>
+        </Box>
+        <Box bg="brown">
+          <MenuItem
+            className="link"
+            color="white"
+          >
+            <Link to="/stock">
               <h3>
                 Stock
               </h3>

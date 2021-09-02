@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import NavBar from '../containers/NavBar';
+import Home from '../containers/Home';
 import Stock from '../containers/Stock';
 import Companies from '../containers/Companies';
 import Forex from '../containers/Forex';
@@ -15,9 +16,14 @@ function Routes() {
         <NavBar />
         <Switch>
           <Route
-            component={Stock}
+            component={Home}
             exact
             path="/"
+          />
+          <Route
+            component={Stock}
+            exact
+            path="/stock"
           />
           
           <Route
