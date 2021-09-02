@@ -6,6 +6,7 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { Container } from 'react-bootstrap';
 import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
+import BitcoinBackground from '../assets/Bitcoin.png';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -42,9 +43,10 @@ const Home = () => {
         gap = {4}
       >
         <GridItem
+          className = "overlay"
           rowSpan = {2}
           colSpan = {3}
-          style = {{ backgroundImage: "url(./assets/Bitcoin.png)" }}
+          style = {{ background: `url(${BitcoinBackground})` }}
         >
           <Box>
             { bitcoin.map((btc) => (
