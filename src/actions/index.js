@@ -120,5 +120,5 @@ const fetchBitcoin = () => async (dispatch) => {
 };
 
 export {
-  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, fetchBitcoin,
+  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, fetchBitcoin
 };
