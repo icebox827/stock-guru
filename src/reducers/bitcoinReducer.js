@@ -1,30 +1,30 @@
 import {
-  FETCH_NEWS_REQUEST,
-  FETCH_NEWS_SUCCESS,
-  FETCH_NEWS_FAILURE,
+  FETCH_BITCOIN_REQUEST,
+  FETCH_BITCOIN_SUCCESS,
+  FETCH_BITCOIN_FAILURE,
 } from '../actions/action';
 
 const INITIAL_STATE = {
-  news: [],
+  bitcoin: [],
   loading: false,
   error: null,
 };
 
-const newsReducer = (state = INITIAL_STATE, action) => {
+const bitcoinReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
-    case FETCH_NEWS_REQUEST:
+    case FETCH_BITCOIN_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case FETCH_NEWS_SUCCESS:
+    case FETCH_BITCOIN_SUCCESS:
       return {
         ...state,
         loading: false,
-        news: action.payload,
+        bitcoin: action.payload,
       };
-    case FETCH_NEWS_FAILURE:
+    case FETCH_BITCOIN_FAILURE:
       return {
         ...state,
         loading: false,
@@ -35,4 +35,4 @@ const newsReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default newsReducer;
+export default bitcoinReducer;
