@@ -33,7 +33,7 @@ function StockDetail() {
   }
   if (error) {
     return (
-      <GridItem colSpan="4">
+      <GridItem colSpan={4}>
         <Error />
       </GridItem>
     );
