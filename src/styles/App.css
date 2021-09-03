@@ -122,3 +122,8 @@ option {
 .container-footer {
   color: white;
 }
+
+.nav-link {
+  margin-right: 10px;
+  padding-right: 10px;
+}
