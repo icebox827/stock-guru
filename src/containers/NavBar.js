@@ -1,77 +1,56 @@
+import { useState } from 'react';
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import {
-  Box, Grid, Menu, MenuItem,
+  Flex, MenuItem, Menu, Text, Box, 
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Menu>
-      <Grid templateColumns="repeat(4, 1fr)">
-        <Box bg="brown">
-          <MenuItem
-            className="link"
-            color="white"
-          >
-            <Link to="/">
-              <h3>
-                Home
-              </h3>
-            </Link>
-          </MenuItem>
-        </Box>
-        <Box bg="brown">
-          <MenuItem
-            className="link"
-            color="white"
-          >
-            <Link to="/stock">
-              <h3>
-                Stock
-              </h3>
-            </Link>
-          </MenuItem>
-        </Box>
-
-        <Box bg="brown">
-          <MenuItem
-            className="link"
-            color="white"
-          >
-            <Link to="/company">
-              <h3>
-                Company
-              </h3>
-            </Link>
-          </MenuItem>
-        </Box>
-
-        <Box bg="brown">
-          <MenuItem
-            className="link"
-            color="white"
-          >
-            <Link to="/forex">
-              <h3>
-                Forex
-              </h3>
-            </Link>
-          </MenuItem>
-        </Box>
-
-        {/* <Box bg="brown">
-          <MenuItem
-            className="link"
-            color="white"
-          >
-            <Link to="/news">
-              <h3>
-                News
-              </h3>
-            </Link>
-          </MenuItem>
-        </Box> */}
-      </Grid>
-    </Menu>
+    <Flex classNameName="Navbar" backgroundColor="teal" h="3rem">
+      <Box>
+        <Link to="/" className="nav-link">
+          <Text fontSize="2xl" color="white">
+            Stock Guru
+          </Text>
+        </Link>
+      </Box>
+      <Box>
+        <Link to="/" className="nav-link active">
+          <Text fontSize="2xl" color="white">
+            Home 
+          </Text>
+        </Link>
+      </Box>
+      <Box>
+        <Link to="/stock">
+          <Text fontSize="2xl" color="white">
+            Stock
+          </Text>
+        </Link>
+      </Box>
+      <Box>
+        <Link to="/company">
+          <Text fontSize="2xl" color="white">
+            Company
+          </Text>
+        </Link>
+      </Box>
+      <Box>
+        <Link to="/forex">
+          <Text fontSize="2xl" color="white">
+            Forex
+          </Text>
+        </Link>
+      </Box>
+      <Box>
+        <Link to="/crypto">
+          <Text fontSize="2xl" color="white">
+            Crypto
+          </Text>
+        </Link>
+      </Box> 
+    </Flex>
   );
 }
 
