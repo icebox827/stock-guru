@@ -35,9 +35,10 @@ const Home = () => {
   }
 
   return (
-    <Container>
+    <Container w="100%">
       <Grid
         h="60vh"
+        w="100%"
         templateRows = "repeat(2, 1fr)"
         templateColumns = "repeat(5, 1fr)"
         gap = {4}
@@ -46,7 +47,7 @@ const Home = () => {
           className = "overlay"
           rowSpan = {2}
           colSpan = {3}
-          style = {{ background: `url(${BitcoinBackground})` }}
+          style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
             { bitcoin.map((btc) => (
