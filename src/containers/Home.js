@@ -8,6 +8,7 @@ import { Card } from 'react-bootstrap';
 import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
 import BitcoinBackground from '../assets/Bitcoin.png'
 import StockBackground from '../assets/stock_background.png';
+import StockBackground1 from '../assets/stock.png'
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -50,55 +51,94 @@ const Home = () => {
           colSpan = {3}
           style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
-          <Box>
+          <Card>
             { bitcoin.map((btc) => (
-              <Text key={btc.synmbol}>
-                Name :
-                {' '}
-                {btc.name}
-                <br/>
-                Exchange :
-                {' '}
-                {btc.exchange}
-                <br/>
-                Price :
-                {' '}
-                $US {btc.price}
-                <br/>
-                Change Percentage :
-                {' '}
-                {btc.changesPercentage}%
-                <br/>
-                Change :
-                {' '}
-                {btc.change}
-                <br/>
-                Day Low :
-                {' '}
-                $US {btc.dayLow}
-                <br/>
-                Day High :
-                {' '}
-                $US {btc.dayHigh}
-                <br/>
-                Market Cao :
-                {' '}
-                {btc.marketCap}
-                <br/>
-                Volume :
-                {' '}
-                {btc.volume}
-                <br/>
-                Open :
-                {' '}
-                $US {btc.open}
-                <br/>
-                Previous Close :
-                {' '}
-                $US {btc.previousClose}
-              </Text>
+              <Card.Body key={btc.synmbol}>
+                <Card.Title>
+                  <Text fontSize="3xl" align="center">Bitcoin Everyday</Text>
+                  <hr />
+                </Card.Title>
+                <Card.Text >
+                <Card.Text>
+                  <Text>
+                    Name :
+                    {' '}
+                    {btc.name}
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Exchange :
+                    {' '}
+                    {btc.exchange}
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Price :
+                    {' '}
+                    {btc.price} USD
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Change Percentage :
+                    {' '}
+                    {btc.changesPercentage}%
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Change :
+                    {' '}
+                    {btc.change}
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Day Low :
+                    {' '}
+                    {btc.dayLow} USD
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  Day High :
+                  {' '}
+                  {btc.dayHigh} USD
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Market Cap :
+                    {' '}
+                    {btc.marketCap}
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Volume :
+                    {' '}
+                    {btc.volume}
+                  </Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Open :
+                    {' '}
+                    {btc.open} USD
+                  </Text>
+                </Card.Text>
+                </Card.Text>
+                <Card.Text>
+                  <Text>
+                    Previous Close :
+                    {' '}   
+                    {btc.previousClose} USD
+                  </Text>
+                </Card.Text>
+              </Card.Body>
+              
             )) }
-          </Box>
+          </Card>
         </GridItem>
         <GridItem
           rowSpan = {1}
@@ -112,6 +152,7 @@ const Home = () => {
         <GridItem
           rowSpan = {1}
           colSpan = {2}
+          style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
             <Text fontSize="4xl" align="center">What we do</Text>
