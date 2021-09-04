@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import {
   Flex, MenuItem, Menu, Text, Box, Spacer, Divider

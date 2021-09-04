@@ -3,7 +3,7 @@ import { Center } from '@chakra-ui/react';
 
 function Footer() {
   return (
-    <Center className="footer">
+    <Center className="footer" backgroundColor="teal">
        <footer>
       <div className="container-footer">
         <span className="text-muted">
