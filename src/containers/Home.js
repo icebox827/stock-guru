@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBitcoin } from '../actions/index';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import { Container, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
-import BitcoinBackground from '../assets/Bitcoin.png';
+import BitcoinBackground from '../assets/Bitcoin.png'
+import StockBackground from '../assets/stock_background.png';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -21,30 +22,27 @@ const Home = () => {
 
   if (loading) {
     return (
-      <GridItem colSpan={4}>
+      <GridItem>
         <Loader />
       </GridItem>
     );
   }
   if (error) {
     return (
-      <GridItem colSpan={4}>
+      <GridItem>
         <Error />
       </GridItem>
     );
   }
 
   return (
-    <Container w="100%">
-      <Row>
-        
-      </Row>
-      {/* <Grid
+   
+      <Grid
         h="60vh"
         w="100%"
         templateRows = "repeat(2, 1fr)"
         templateColumns = "repeat(5, 1fr)"
-        gap = {4}
+        gap = {2}
       >
         <GridItem
           className = "overlay"
@@ -105,9 +103,10 @@ const Home = () => {
         <GridItem
           rowSpan = {1}
           colSpan = {2}
+          style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
-            Second grid
+            <Text fontSize="4xl" align="center">Who we are</Text>
           </Box>
         </GridItem>
         <GridItem
@@ -115,11 +114,11 @@ const Home = () => {
           colSpan = {2}
         >
           <Box>
-            Third grid
+            <Text fontSize="4xl" align="center">What we do</Text>
           </Box>
         </GridItem>
-      </Grid> */}
-    </Container>
+      </Grid> 
+    
   )
 }
 
