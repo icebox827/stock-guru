@@ -5,6 +5,7 @@ import forexReducer from './forexReducer';
 import filterReducer from './filterReducer';
 import stockItemReducer from './stockItemReducer';
 import bitcoinReducer from './bitcoinReducer';
+import cryptoReducer from './cryptoReducer';
 
 const allReducers = combineReducers({
   stocks: stockReducer,
@@ -13,6 +14,7 @@ const allReducers = combineReducers({
   filter: filterReducer,
   stockItem: stockItemReducer,
   bitcoin: bitcoinReducer,
+  crypto: cryptoReducer,
 });
 
 export default allReducers;
