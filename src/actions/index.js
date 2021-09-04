@@ -17,6 +17,9 @@ import {
   FETCH_BITCOIN_FAILURE,
   FETCH_BITCOIN_SUCCESS,
   FETCH_BITCOIN_REQUEST,
+  FETCH_CRYPTO_FAILURE,
+  FETCH_CRYPTO_REQUEST,
+  FETCH_CRYPTO_SUCCESS
 } from './action';
 
 const fetchStock = () => async (dispatch) => {
@@ -119,6 +122,23 @@ const fetchBitcoin = () => async (dispatch) => {
   }
 };
 
+const fetchCrypto = () => async (dispatch) => {
+  dispatch({ type: FETCH_CRYPTO_REQUEST });
+  try {
+    const response = await fetch('https://financialmodelingprep.com/api/v3/symbol/available-cryptocurrencies?apikey=71692019ce2067a12139d5ef9415ecdb')
+    const data = await response.json();
+    dispatch({
+      type: FETCH_CRYPTO_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: FETCH_CRYPTO_FAILURE,
+      payload: error,
+    })
+  }
+};
+
 export {
-  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, fetchBitcoin
+  fetchStock, fetchCompanies, fetchForex, filterStock, fetchStockItem, fetchBitcoin, fetchCrypto
 };
