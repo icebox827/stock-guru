@@ -8,7 +8,8 @@ function Footer() {
       <div className="container-footer">
         <span className="text-muted">
           &copy;
-          { ` ${(new Date()).getFullYear()} All rights reserved | Built with love by: <a href="https://denislafontant.com" target="_blank">Denis Lafontant.</a>`}
+          { ` ${(new Date()).getFullYear()} All rights reserved | Built with love by: `}
+          <a href="https://denislafontant.com" target="_blank" rel="noreferrer" >Denis Lafontant.</a>
         </span>
       </div>
     </footer>

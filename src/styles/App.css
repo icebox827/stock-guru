@@ -15,14 +15,14 @@ body {
 
 .symbol {
   font-weight: 800;
-  background-color: brown;
+  background-color: teal;
   text-align: center;
   color: white;
 }
 
 .companyName {
   font-weight: 600;
-  border-bottom: brown solid 1px;
+  border-bottom: teal solid 1px;
   padding-left: 10px;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .ticker {
   font-weight: 800;
-  background-color: brown;
+  background-color: teal;
   text-align: center;
   color: white;
 }
@@ -63,12 +63,12 @@ legend {
 
 .form-label {
   color: white;
-  background-color: brown;
+  background-color: teal;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 option {
-  border: 1px solid brown;
+  border: 1px solid teal;
   background-color: burlywood;
 }
 
@@ -79,12 +79,12 @@ option {
 }
 
 .website {
-  background-color: rgb(155, 62, 62);
+  background-color: teal;
   color: white;
 }
 
 .btn {
-  background-color: rgb(52, 59, 160);
+  background-color: teal;
   color: white;
   text-align: center;
   display: block;
@@ -129,4 +129,12 @@ option {
 
 .nav-link:hover {
   background-color: cornflowerblue;
+}
+
+footer a {
+  color: rgb(238, 238, 92);
+}
+
+footer a:hover {
+  font-size: x-large;
 }
