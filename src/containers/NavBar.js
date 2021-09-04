@@ -9,7 +9,7 @@ function NavBar() {
     <Flex classNameName="Navbar" backgroundColor="teal" h="3rem">
       <Box>
         <Link to="/">
-          <Text fontSize="2xl" color="white" className="nav-link">
+          <Text fontSize="2xl" color="yellow.500" className="nav-link">
             Stock Guru
           </Text>
         </Link>
