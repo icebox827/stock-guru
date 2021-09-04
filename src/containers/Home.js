@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBitcoin } from '../actions/index';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
 import BitcoinBackground from '../assets/Bitcoin.png';
 
@@ -36,7 +36,10 @@ const Home = () => {
 
   return (
     <Container w="100%">
-      <Grid
+      <Row>
+        
+      </Row>
+      {/* <Grid
         h="60vh"
         w="100%"
         templateRows = "repeat(2, 1fr)"
@@ -115,7 +118,7 @@ const Home = () => {
             Third grid
           </Box>
         </GridItem>
-      </Grid>
+      </Grid> */}
     </Container>
   )
 }
