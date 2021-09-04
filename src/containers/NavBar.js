@@ -9,48 +9,43 @@ function NavBar() {
   return (
     <Flex classNameName="Navbar" backgroundColor="teal" h="3rem">
       <Box>
-        <Link to="/" className="nav-link">
-          <Text fontSize="2xl" color="white">
+        <Link to="/">
+          <Text fontSize="2xl" color="white" className="nav-link">
             Stock Guru
           </Text>
         </Link>
       </Box>
-      <Spacer/>
       <Box>
-        <Link to="/" className="nav-link active">
-          <Text fontSize="2xl" color="white">
+        <Link to="/">
+          <Text fontSize="2xl" color="white" className="nav-link">
             Home 
           </Text>
         </Link>
       </Box>
-      <Divider orientation="horizontal" />
       <Box>
-        <Link to="/stock" className="nav-link">
-          <Text fontSize="2xl" color="white">
+        <Link to="/stock">
+          <Text fontSize="2xl" color="white" className="nav-link">
             Stock
           </Text>
         </Link>
       </Box>
-      <Divider orientation="horizontal" />
       <Box>
-        <Link to="/company" className="nav-link">
-          <Text fontSize="2xl" color="white">
+        <Link to="/company" >
+          <Text fontSize="2xl" color="white" className="nav-link">
             Company
           </Text>
         </Link>
       </Box>
-      <Divider orientation="horizontal" />
       <Box>
-        <Link to="/forex" className="nav-link">
-          <Text fontSize="2xl" color="white">
+        <Link to="/forex" >
+          <Text fontSize="2xl" color="white" className="nav-link">
             Forex
           </Text>
         </Link>
       </Box>
-      <Divider orientation="horizontal" />
       <Box>
-        <Link to="/crypto" className="nav-link">
-          <Text fontSize="2xl" color="white">
+        <Link to="/crypto" >
+          <Text fontSize="2xl" color="white" className="nav-link">
             Crypto
           </Text>
         </Link>
