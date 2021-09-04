@@ -39,11 +39,12 @@ const Home = () => {
   return (
    
       <Grid
-        h="60vh"
+        h="86.5vh"
         w="100%"
         templateRows = "repeat(2, 1fr)"
         templateColumns = "repeat(5, 1fr)"
         gap = {2}
+        className="grid"
       >
         <GridItem
           className = "overlay"
@@ -55,88 +56,76 @@ const Home = () => {
             { bitcoin.map((btc) => (
               <Card.Body key={btc.synmbol}>
                 <Card.Title>
-                  <Text fontSize="3xl" align="center">Bitcoin Everyday</Text>
+                  <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
                   <hr />
                 </Card.Title>
-                <Card.Text >
                 <Card.Text>
-                  <Text>
-                    Name :
-                    {' '}
-                    {btc.name}
-                  </Text>
+                  <Text fontSize="3xl" align="center" fontWeight="semibold">{btc.name} {btc.exchange}</Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
-                    Exchange :
-                    {' '}
-                    {btc.exchange}
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Price :
                     {' '}
                     {btc.price} USD
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Change Percentage :
                     {' '}
                     {btc.changesPercentage}%
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Change :
                     {' '}
                     {btc.change}
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Day Low :
                     {' '}
                     {btc.dayLow} USD
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  Day High :
-                  {' '}
-                  {btc.dayHigh} USD
+                  <Text fontSize="2xl" marginLeft="5">
+                    Day High :
+                    {' '}
+                    {btc.dayHigh} USD
+                  </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Market Cap :
                     {' '}
                     {btc.marketCap}
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Volume :
                     {' '}
                     {btc.volume}
                   </Text>
                 </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Open :
                     {' '}
                     {btc.open} USD
                   </Text>
                 </Card.Text>
-                </Card.Text>
                 <Card.Text>
-                  <Text>
+                  <Text fontSize="2xl" marginLeft="5">
                     Previous Close :
                     {' '}   
                     {btc.previousClose} USD
                   </Text>
                 </Card.Text>
               </Card.Body>
-              
             )) }
           </Card>
         </GridItem>
@@ -146,7 +135,13 @@ const Home = () => {
           style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
-            <Text fontSize="4xl" align="center">Who we are</Text>
+            <Text fontSize="4xl" align="center" fontWeight="bold">Who we are</Text>
+            <hr />
+            <Text noOfLines={[1, 2, 3]} fontSize="2xl" fontWeight="semibold" marginLeft="2">
+              Stock Guru is an app designed to help novice have a new look on Stock Market data using real time information.
+              We display info on NYSE and NASDAQ companies, Forex and Crypto exchange marker. We are not a data analysis application nor provide
+              advices on stock market product
+            </Text>
           </Box>
         </GridItem>
         <GridItem
@@ -155,7 +150,8 @@ const Home = () => {
           style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
-            <Text fontSize="4xl" align="center">What we do</Text>
+            <Text fontSize="4xl" align="center" fontWeight="bold">What we do</Text>
+            <hr />
           </Box>
         </GridItem>
       </Grid> 
