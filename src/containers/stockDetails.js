@@ -41,7 +41,7 @@ function StockDetail() {
 
   return (
     <div>
-      <Jumbotron fluid>
+      <Jumbotron fluid className="jumbotron-details">
         <Container>
           <h1 className="shadow-sm pb-2 mb-3">
             {stockItem.symbol}

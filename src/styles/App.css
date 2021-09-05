@@ -138,3 +138,7 @@ footer a {
 footer a:hover {
   font-size: x-large;
 }
+
+.jumbotron-details {
+  height: 79.5vh;
+}
