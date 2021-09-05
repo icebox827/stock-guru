@@ -39,7 +39,7 @@ const Home = () => {
   return (
    
       <Grid
-        h="86.5vh"
+        h="86.7vh"
         w="100%"
         templateRows = "repeat(2, 1fr)"
         templateColumns = "repeat(5, 1fr)"
