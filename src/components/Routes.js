@@ -5,8 +5,8 @@ import Home from '../containers/Home';
 import Stock from '../containers/Stock';
 import Companies from '../containers/Companies';
 import Forex from '../containers/Forex';
+import Crypto from '../containers/Crypto';
 import StockDetail from '../containers/stockDetails';
-import News from '../containers/News';
 import Footer from '../containers/Footer';
 import '../styles/App.css';
 
@@ -45,9 +45,9 @@ function Routes() {
           />
 
           <Route 
-            component={News}
+            component={Crypto}
             exact
-            path="/news"
+            path="/crypto"
           />
         </Switch>
         <Footer />
