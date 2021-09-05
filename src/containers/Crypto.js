@@ -52,12 +52,14 @@ const Crypto = () => {
           </Text>
         </Card.Title>
         <Card.Text>
-          <Text marginLeft="3">
-            Name:
-            {' '}
+          <Text 
+            marginLeft="3"
+            fontWeight="bold"
+          >
             {cx.name}
           </Text>
         </Card.Text>
+        <hr/>
         <Card.Text>
           <Text marginLeft="3">
             Currency:
