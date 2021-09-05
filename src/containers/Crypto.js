@@ -41,33 +41,39 @@ const Crypto = () => {
       >
       <Card.Body>
         <Card.Title>
-          <Text>
+          <Text 
+            fontSize="2xl"
+            fontWeight="bold"
+            align="center"
+            color="white"
+            backgroundColor="teal"
+          >
             {cx.symbol}
           </Text>
         </Card.Title>
         <Card.Text>
-          <Text>
+          <Text marginLeft="3">
             Name:
             {' '}
             {cx.name}
           </Text>
         </Card.Text>
         <Card.Text>
-          <Text>
+          <Text marginLeft="3">
             Currency:
             {' '}
-            {cx.currency} USD
+            {cx.currency}
           </Text>
         </Card.Text>
         <Card.Text>
-          <Text>
+          <Text marginLeft="3">
             Stock Exchange:
             {' '}
             {cx.stockExchange}
           </Text>
         </Card.Text>
         <Card.Text>
-          <Text>
+          <Text marginLeft="3">
             Exchange Short Name:
             {' '}
             {cx.exchangeShortName}
