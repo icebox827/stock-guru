@@ -163,7 +163,7 @@ const Home = () => {
             <hr />
             <Text noOfLines={[1, 2, 3, 4, 5, 6]} fontSize="2xl" fontWeight="semibold" marginLeft="2">
               We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
-              advices on stock market product. We do not trade nor selling anything. If you like what we do, please buy us a coffee.
+              advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
             </Text>
           </Box>
         </GridItem>
