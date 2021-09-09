@@ -34,6 +34,17 @@ function NavBar() {
         flexDir="column"
         zIndex={20}
       >
+        <Flex justify="flex-end">
+          <IconButton 
+            mt={2}
+            mr={2}
+            aria-label="Close Menu"
+            size="md"
+            icon={
+              <CloseIcon />
+            }
+          />
+        </Flex>
         <Flex
           flexDir="column"
           align="center"
