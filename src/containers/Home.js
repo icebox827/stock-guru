@@ -42,97 +42,100 @@ const Home = () => {
       w="100vw"
       wrap="wrap"
     >
-      <Grid
-        h="87.7vh"
-        w="100vw"
-        templateRows = "repeat(2, 1fr)"
-        templateColumns = "repeat(5, 1fr)"
-        gap = {2}
-        className="grid"
-        mt={10}
+      <Flex
+        display={['none', 'none', 'flex', 'flex']}
       >
+        <Grid
+          h="87.7vh"
+          w="100vw"
+          templateRows = "repeat(2, 1fr)"
+          templateColumns = "repeat(5, 1fr)"
+          gap = {2}
+          className="grid"
+          mt={10}
+        >
         <GridItem
           className = "overlay"
           rowSpan = {2}
           colSpan = {3}
           style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
-          <Card>
-            { bitcoin.map((btc) => (
-              <Card.Body key={btc.synmbol}>
-                <Card.Title>
-                  <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
-                  <hr />
-                </Card.Title>
-                <Card.Text>
-                  <Text fontSize="3xl" align="center" fontWeight="semibold">{btc.name} {btc.exchange}</Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Price :
-                    {' '}
-                    {btc.price} USD
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Change Percentage :
-                    {' '}
-                    {btc.changesPercentage}%
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Change :
-                    {' '}
-                    {btc.change}
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Day Low :
-                    {' '}
-                    {btc.dayLow} USD
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Day High :
-                    {' '}
-                    {btc.dayHigh} USD
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Market Cap :
-                    {' '}
-                    {btc.marketCap}
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Volume :
-                    {' '}
-                    {btc.volume}
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Open :
-                    {' '}
-                    {btc.open} USD
-                  </Text>
-                </Card.Text>
-                <Card.Text>
-                  <Text fontSize="2xl" marginLeft="5">
-                    Previous Close :
-                    {' '}   
-                    {btc.previousClose} USD
-                  </Text>
-                </Card.Text>
-              </Card.Body>
-            )) }
-          </Card>
+        <Card>
+          { bitcoin.map((btc) => (
+            <Card.Body key={btc.synmbol}>
+              <Card.Title>
+                <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
+                <hr />
+              </Card.Title>
+              <Card.Text>
+                <Text fontSize="3xl" align="center" fontWeight="semibold">{btc.name} {btc.exchange}</Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Price :
+                  {' '}
+                  {btc.price} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Change Percentage :
+                  {' '}
+                  {btc.changesPercentage}%
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Change :
+                  {' '}
+                  {btc.change}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Day Low :
+                  {' '}
+                  {btc.dayLow} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Day High :
+                  {' '}
+                  {btc.dayHigh} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Market Cap :
+                  {' '}
+                  {btc.marketCap}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Volume :
+                  {' '}
+                  {btc.volume}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Open :
+                  {' '}
+                  {btc.open} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Previous Close :
+                  {' '}   
+                  {btc.previousClose} USD
+                </Text>
+              </Card.Text>
+            </Card.Body>
+          )) }
+        </Card>
           <Box align="center">
             <form action="https://www.paypal.com/donate" method="post" target="_top">
               <input type="hidden" name="business" value="H8KJWYJNE4EF8" />
@@ -172,7 +175,127 @@ const Home = () => {
             </Text>
           </Box>
         </GridItem>
-      </Grid> 
+        </Grid> 
+      </Flex>
+      <Flex
+        display={['flex', 'flex', 'none', 'none']}
+        flexDir="column"
+      >
+        <Card 
+          w="100vw"
+          mt={10}
+          style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+        >
+          { bitcoin.map((btc) => (
+            <Card.Body key={btc.synmbol}>
+              <Card.Title>
+                <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
+                <hr />
+              </Card.Title>
+              <Card.Text>
+                <Text fontSize="3xl" align="center" fontWeight="semibold">{btc.name} {btc.exchange}</Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Price :
+                  {' '}
+                  {btc.price} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Change Percentage :
+                  {' '}
+                  {btc.changesPercentage}%
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Change :
+                  {' '}
+                  {btc.change}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Day Low :
+                  {' '}
+                  {btc.dayLow} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Day High :
+                  {' '}
+                  {btc.dayHigh} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Market Cap :
+                  {' '}
+                  {btc.marketCap}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Volume :
+                  {' '}
+                  {btc.volume}
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Open :
+                  {' '}
+                  {btc.open} USD
+                </Text>
+              </Card.Text>
+              <Card.Text>
+                <Text fontSize="2xl" marginLeft="5">
+                  Previous Close :
+                  {' '}   
+                  {btc.previousClose} USD
+                </Text>
+              </Card.Text>
+            </Card.Body>
+          )) }
+        </Card>
+        <Card
+          w="100vw"
+          style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+        >
+          <Card.Body>
+            <Card.Title>
+              <Text fontSize="4xl" align="center" fontWeight="bold">Who we are</Text>
+            </Card.Title>
+            <hr />
+            <Card.Text>
+              <Text fontWeight="semibold" marginLeft="2">
+                We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
+                advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
+              </Text>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card
+          w="100vw"
+          style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+        >
+          <Card.Body>
+            <Card.Title>
+              <Text fontSize="4xl" align="center" fontWeight="bold">What we do</Text>
+            </Card.Title>
+            <hr />
+            <Card.Text>
+              <Text fontWeight="semibold" marginLeft="2">
+                We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
+                advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
+              </Text>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Flex>
     </Flex>
   )
 }
