@@ -143,10 +143,7 @@ footer a:hover {
   height: 79.7vh;
 }
 
-@media screen and (max-width: 767px) {
-  .grid {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(1, 1fr);
-  }
+.crypto {
+  margin-top: 4rem;
+  margin-bottom: -2rem;
 }

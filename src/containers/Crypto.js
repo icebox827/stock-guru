@@ -35,9 +35,10 @@ const Crypto = () => {
 
     return crypto.map((cx) => (
       <Card
-      className="bg-dark text-white mt-3"
+      className="bg-dark text-white crypto"
       style={{ width: '21rem' }}
       key={cx.symbol}
+     
       >
       <Card.Body>
         <Card.Title>
@@ -89,7 +90,7 @@ const Crypto = () => {
   return (
     <Flex
       display="flex"
-      w="100%"
+      w="100vw"
       wrap="wrap"
     >
       {renderCrypto()}
