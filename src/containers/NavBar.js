@@ -6,15 +6,23 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Flex classNameName="Navbar" backgroundColor="teal" h="3rem" w="100%">
-      <Box>
+    <Flex 
+      classNameName="Navbar" 
+      backgroundColor="teal" 
+      h="3rem" 
+      w="100%"
+      pos="fixed"
+      align="center"
+    >
+       <Box>
         <Link to="/">
           <Text fontSize="2xl" color="yellow.500" className="nav-link">
             Stock Guru
           </Text>
         </Link>
       </Box>
-      <Box>
+      <Flex>
+         <Box>
         <Link to="/">
           <Text fontSize="2xl" color="white" className="nav-link">
             Home 
@@ -49,6 +57,7 @@ function NavBar() {
           </Text>
         </Link>
       </Box> 
+      </Flex>
     </Flex>
   );
 }
