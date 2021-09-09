@@ -39,16 +39,17 @@ const Home = () => {
   return (
     <Flex
       display="flex"
-      w="100%"
+      w="100vw"
       wrap="wrap"
     >
       <Grid
-        h="86.7vh"
-        w="100%"
+        h="87.7vh"
+        w="100vw"
         templateRows = "repeat(2, 1fr)"
         templateColumns = "repeat(5, 1fr)"
         gap = {2}
         className="grid"
+        mt={10}
       >
         <GridItem
           className = "overlay"
