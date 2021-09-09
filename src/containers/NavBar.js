@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Flex classNameName="Navbar" backgroundColor="teal" h="3rem">
+    <Flex classNameName="Navbar" backgroundColor="teal" h="3rem" w="100%">
       <Box>
         <Link to="/">
           <Text fontSize="2xl" color="yellow.500" className="nav-link">
