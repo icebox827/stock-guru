@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const [display, setDisplay] = useState('none');
   return (
     <Flex 
       classNameName="Navbar" 
@@ -23,6 +24,7 @@ function NavBar() {
         </Link>
       </Box>
       <Flex
+        display={display}
         w="100vw"
         h="100vh"
         backgroundColor="teal"
@@ -43,6 +45,8 @@ function NavBar() {
             icon={
               <CloseIcon />
             }
+            backgroundColor="teal.100"
+            onClick={() => setDisplay('none')}
           />
         </Flex>
         <Flex
@@ -130,9 +134,12 @@ function NavBar() {
         aria-label="Open Menu"
         size="md"
         mr={2}
-        icon={<HamburgerIcon />}
+        icon={
+          <HamburgerIcon />
+        }
         display={['flex', 'flex', 'none', 'none']}
         backgroundColor="teal.100"
+        onClick={() => setDisplay('flex')}
       />
     </Flex>
   );
