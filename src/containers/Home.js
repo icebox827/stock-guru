@@ -5,7 +5,7 @@ import { fetchBitcoin } from '../actions/index';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { Card } from 'react-bootstrap';
-import { Grid, GridItem, Box, Text } from '@chakra-ui/layout';
+import { Flex, Grid, GridItem, Box, Text } from '@chakra-ui/layout';
 import BitcoinBackground from '../assets/Bitcoin.png'
 import StockBackground from '../assets/stock_background.png';
 import StockBackground1 from '../assets/stock.png'
@@ -37,7 +37,11 @@ const Home = () => {
   }
 
   return (
-   
+    <Flex
+      display="flex"
+      w="100%"
+      wrap="wrap"
+    >
       <Grid
         h="86.7vh"
         w="100%"
@@ -168,7 +172,7 @@ const Home = () => {
           </Box>
         </GridItem>
       </Grid> 
-    
+    </Flex>
   )
 }
 
