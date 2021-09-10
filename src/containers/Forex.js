@@ -35,7 +35,7 @@ function Forex() {
 
     return forex.map((fx) => (
       <Card
-        className="bg-dark text-white mt-3"
+        className="bg-dark text-white modifier"
         key={fx.ticker}
         style={{ width: '21rem' }}
       >

@@ -47,7 +47,7 @@ function Stock() {
       <Flex 
         display="flex"
         align="center"
-        className="filter"
+        className="modifier"
       >
         <StockFilter filterChange={handleChange} />
       </Flex>
@@ -55,7 +55,7 @@ function Stock() {
                 filter.map((stock) => (
                   <Card
                     style={{ width: '21rem' }}
-                    className="bg-dark text-white stock"
+                    className="bg-dark text-white modifier"
                     key={stock.ticker}
                   >
                     <Card.Body>

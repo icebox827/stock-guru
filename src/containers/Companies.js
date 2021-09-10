@@ -37,7 +37,7 @@ function Companies() {
 
     return companies.map((company) => (
       <Card
-        className="bg-dark text-white mt-3"
+        className="bg-dark text-white modifier"
         key={company.symbol}
         style={{ width: '21rem' }}
       >

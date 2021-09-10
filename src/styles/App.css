@@ -143,17 +143,12 @@ footer a:hover {
   height: 79.7vh;
 }
 
-.crypto {
+.modifier{
   margin-top: 4rem;
   margin-bottom: -2rem;
 }
 
-.stock {
-  margin-top: 4rem;
-  margin-bottom: -2rem;
-}
-
-.filter {
+.filter{
   margin-top: 4rem;
   margin-bottom: -2rem;
 }
