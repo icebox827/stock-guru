@@ -41,12 +41,16 @@ function Stock() {
   return (
     <Flex
       display="flex"
-      w="100%"
+      w="100vw"
       wrap="wrap"
     >
-
-    <StockFilter filterChange={handleChange} mt={10} />
-
+      <Flex 
+        display="flex"
+        align="center"
+        className="filter"
+      >
+        <StockFilter filterChange={handleChange} />
+      </Flex>
       {
                 filter.map((stock) => (
                   <Card
