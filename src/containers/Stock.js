@@ -45,13 +45,13 @@ function Stock() {
       wrap="wrap"
     >
 
-    <StockFilter filterChange={handleChange} />
+    <StockFilter filterChange={handleChange} mt={10} />
 
       {
                 filter.map((stock) => (
                   <Card
                     style={{ width: '21rem' }}
-                    className="bg-dark text-white mt-5"
+                    className="bg-dark text-white stock"
                     key={stock.ticker}
                   >
                     <Card.Body>

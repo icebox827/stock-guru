@@ -9,7 +9,7 @@ function NavBar() {
   const [display, setDisplay] = useState('none');
   return (
     <Flex 
-      classNameName="Navbar" 
+      className="Navbar" 
       backgroundColor="teal" 
       h="3rem" 
       w="100vw"
