@@ -180,6 +180,7 @@ const Home = () => {
       <Flex
         display={['flex', 'flex', 'none', 'none']}
         flexDir="column"
+        mt={7}
       >
         <Card 
           w="100vw"
