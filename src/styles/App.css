@@ -120,6 +120,7 @@ option {
 
 .container-footer {
   color: white;
+  padding-top: 5px;
 }
 
 .nav-link {
@@ -130,10 +131,6 @@ option {
 .nav-link:hover {
   background-color: cornflowerblue;
 }
-
-/* .footer {
-  margin-top: 3rem;
-} */
 
 footer a {
   color: rgb(238, 238, 92);
