@@ -153,11 +153,12 @@ const Home = () => {
           style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
-            <Text fontSize="4xl" align="center" fontWeight="bold">Who we are</Text>
+            <Text fontSize="4xl" align="center" fontWeight="bold">Who we are?</Text>
             <hr />
             <Text noOfLines={[1, 2, 3, 4, 5]} fontSize="2xl" fontWeight="semibold" marginLeft="2">
-              Stock Guru is an app designed to help novice have a new look on Stock Market information using real time data. We simplify
-              The way data is being displayed and make it easy for anyone to have an idea on how stocks flow everyday in different market.
+              Stock Guru is an app designed to help novices have a new look at Stock Market information using real-time data. 
+              We simplify the way data is being displayed and make it easy for anyone to have an idea of how stocks flow 
+              every day in different markets.
             </Text>
           </Box>
         </GridItem>
@@ -167,11 +168,12 @@ const Home = () => {
           style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
-            <Text fontSize="4xl" align="center" fontWeight="bold">What we do</Text>
+            <Text fontSize="4xl" align="center" fontWeight="bold">What we do?</Text>
             <hr />
             <Text noOfLines={[1, 2, 3, 4, 5, 6]} fontSize="2xl" fontWeight="semibold" marginLeft="2">
-              We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
-              advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
+              We display information on NYSE and NASDAQ companies, Forex, and the Crypto exchange market. 
+              We are not a data analysis application nor provide pieces of advice on the stock market product. 
+              We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
             </Text>
           </Box>
         </GridItem>
@@ -268,13 +270,14 @@ const Home = () => {
         >
           <Card.Body>
             <Card.Title>
-              <Text fontSize="4xl" align="center" fontWeight="bold">Who we are</Text>
+              <Text fontSize="4xl" align="center" fontWeight="bold">Who we are?</Text>
             </Card.Title>
             <hr />
             <Card.Text>
               <Text fontWeight="semibold" marginLeft="2">
-                We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
-                advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
+                Stock Guru is an app designed to help novices have a new look at Stock Market information using real-time data. 
+                We simplify the way data is being displayed and make it easy for anyone to have an idea of how stocks flow 
+                every day in different markets.
               </Text>
             </Card.Text>
           </Card.Body>
@@ -285,13 +288,14 @@ const Home = () => {
         >
           <Card.Body>
             <Card.Title>
-              <Text fontSize="4xl" align="center" fontWeight="bold">What we do</Text>
+              <Text fontSize="4xl" align="center" fontWeight="bold">What we do?</Text>
             </Card.Title>
             <hr />
             <Card.Text>
               <Text fontWeight="semibold" marginLeft="2">
-                We display information on NYSE and NASDAQ companies, Forex and Crypto exchange market. We are not a data analysis application nor provide
-                advices on stock market product. We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
+                We display information on NYSE and NASDAQ companies, Forex, and the Crypto exchange market. 
+                We are not a data analysis application nor provide pieces of advice on the stock market product. 
+                We do not trade nor selling anything. If you like what we are doing, please buy us a coffee.
               </Text>
             </Card.Text>
           </Card.Body>
