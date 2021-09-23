@@ -46,7 +46,7 @@ const Home = () => {
         display={['none', 'none', 'flex', 'flex']}
       >
         <Grid
-          h="100vh"
+          h="92vh"
           w="100vw"
           templateRows = "repeat(2, 1fr)"
           templateColumns = "repeat(5, 1fr)"
