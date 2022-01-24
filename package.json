@@ -1,6 +1,6 @@
 {
   "name": "stock-guru",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@babel/core": "7.x",
@@ -73,5 +73,10 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "4.x"
-  }
+  },
+  "description": "Stock Market information software",
+  "main": "index.js",
+  "repository": "https://github.com/icebox827/stock-guru.git",
+  "author": "Denis Lafontant",
+  "license": "MIT"
 }
