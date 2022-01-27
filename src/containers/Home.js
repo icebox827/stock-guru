@@ -64,7 +64,15 @@ const Home = () => {
           { bitcoin.map((btc) => (
             <Card.Body key={btc.synmbol}>
               <Card.Title>
-                <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
+                <Text 
+                  fontSize="4xl" 
+                  align="center" 
+                  fontWeight="bold"
+                  color="white"
+                  backgroundColor="teal"
+                >
+                  Bitcoin Everyday
+                </Text>
                 <hr />
               </Card.Title>
               <Card.Text>
@@ -182,17 +190,25 @@ const Home = () => {
       <Flex
         display={['flex', 'flex', 'none', 'none']}
         flexDir="column"
-        mt={7}
+        mt={9}
       >
         <Card 
           w="100vw"
           mt={10}
-          style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           { bitcoin.map((btc) => (
             <Card.Body key={btc.synmbol}>
               <Card.Title>
-                <Text fontSize="4xl" align="center" fontWeight="bold">Bitcoin Everyday</Text>
+                <Text 
+                  fontSize="4xl" 
+                  align="center" 
+                  fontWeight="bold"
+                  color="white"
+                  backgroundColor="teal"
+                >
+                  Bitcoin Everyday
+                </Text>
                 <hr />
               </Card.Title>
               <Card.Text>
@@ -266,7 +282,7 @@ const Home = () => {
         </Card>
         <Card
           w="100vw"
-          style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Card.Body>
             <Card.Title>
@@ -283,7 +299,7 @@ const Home = () => {
         </Card>
         <Card
           w="100vw"
-          style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Card.Body>
             <Card.Title>
