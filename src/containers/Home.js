@@ -58,7 +58,7 @@ const Home = () => {
           className = "overlay"
           rowSpan = {2}
           colSpan = {3}
-          style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${BitcoinBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
         <Card>
           { bitcoin.map((btc) => (
@@ -150,7 +150,7 @@ const Home = () => {
         <GridItem
           rowSpan = {1}
           colSpan = {2}
-          style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${StockBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
             <Text fontSize="4xl" align="center" fontWeight="bold">What is Stock Guru?</Text>
@@ -164,7 +164,7 @@ const Home = () => {
         <GridItem
           rowSpan = {1}
           colSpan = {2}
-          style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          // style = {{ background: `url(${StockBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
         >
           <Box>
             <Text fontSize="4xl" align="center" fontWeight="bold">What Stock Guru does?</Text>
@@ -178,6 +178,7 @@ const Home = () => {
         </GridItem>
         </Grid> 
       </Flex>
+    
       <Flex
         display={['flex', 'flex', 'none', 'none']}
         flexDir="column"
