@@ -1,30 +1,30 @@
 import {
-  FETCH_FOREX_FAILURE,
-  FETCH_FOREX_REQUEST,
-  FETCH_FOREX_SUCCESS,
+  FETCH_CRYPTO_REQUEST,
+  FETCH_CRYPTO_SUCCESS,
+  FETCH_CRYPTO_FAILURE,
 } from '../actions/action';
 
 const INITIAL_STATE = {
-  forex: [],
+  crypto: [],
   loading: false,
-  error: null,
+  error: null
 };
 
-const forexReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case FETCH_FOREX_REQUEST:
+const cryptoReducer = (state = INITIAL_STATE, action) => {
+  switch(action.type) {
+    case FETCH_CRYPTO_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case FETCH_FOREX_SUCCESS:
+    case FETCH_CRYPTO_SUCCESS:
       return {
         ...state,
         loading: false,
-        forex: action.payload,
+        crypto: action.payload,
       };
-    case FETCH_FOREX_FAILURE:
+    case FETCH_CRYPTO_FAILURE:
       return {
         ...state,
         loading: false,
@@ -35,4 +35,4 @@ const forexReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default forexReducer;
+export default cryptoReducer;

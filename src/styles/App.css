@@ -15,14 +15,14 @@ body {
 
 .symbol {
   font-weight: 800;
-  background-color: brown;
+  background-color: teal;
   text-align: center;
   color: white;
 }
 
 .companyName {
   font-weight: 600;
-  border-bottom: brown solid 1px;
+  border-bottom: teal solid 1px;
   padding-left: 10px;
 }
 
@@ -38,14 +38,14 @@ body {
 
 .ticker {
   font-weight: 800;
-  background-color: brown;
+  background-color: teal;
   text-align: center;
   color: white;
 }
 
 .forexText {
   padding-left: 10px;
-  background-color: wheat;
+  background-color: none;
 }
 
 .stockText {
@@ -63,13 +63,13 @@ legend {
 
 .form-label {
   color: white;
-  background-color: brown;
+  background-color: teal;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 option {
-  border: 1px solid brown;
-  background-color: burlywood;
+  border: 1px solid teal;
+  background-color: rgb(206, 235, 203);
 }
 
 .container {
@@ -79,11 +79,78 @@ option {
 }
 
 .website {
-  background-color: blue;
+  background-color: teal;
   color: white;
 }
 
 .btn {
-  background-color: blue;
+  background-color: teal;
   color: white;
+  text-align: center;
+  display: block;
+  margin: 0  auto;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+}
+
+.image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.right {
+  padding-left: 20px;
+}
+
+.jumbotron {
+  margin: 25px;
+}
+
+.footer {
+  height: 3rem;
+}
+
+.container-footer {
+  color: white;
+  padding-top: 5px;
+}
+
+.nav-link {
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.nav-link:hover {
+  background-color: cornflowerblue;
+}
+
+footer a {
+  color: rgb(238, 238, 92);
+}
+
+footer a:hover {
+  font-size: x-large;
+}
+
+.jumbotron-details {
+  height: 79.7vh;
+}
+
+.modifier{
+  margin-top: 4rem;
+  margin-bottom: -2rem;
+}
+
+
+.donateButton input {
+  width: 100%;
 }

@@ -1,28 +1,59 @@
 import React from 'react';
-import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import NavBar from '../containers/NavBar'
-import Stock from '../containers/Stock'
-import Companies from '../containers/Companies'
-import Forex from '../containers/Forex'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import NavBar from '../containers/NavBar';
+import Home from '../containers/Home';
+import Stock from '../containers/Stock';
+import Companies from '../containers/Companies';
+import Forex from '../containers/Forex';
+import Crypto from '../containers/Crypto';
 import StockDetail from '../containers/stockDetails';
+import Footer from '../containers/Footer';
 import '../styles/App.css';
-import store from '../store';
 
-const Routes = () => {
+function Routes() {
   return (
-    <Provider store={store}>
       <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path='/' component={Stock} />
-        <Route exact path='/company' component={Companies} />
-        <Route exact path='/forex' component={Forex} />
-        <Route exact path='/stockDetail/:ticker' component={StockDetail} />
-      </Switch>
+        <NavBar />
+        <Switch>
+          <Route
+            component={Home}
+            exact
+            path="/"
+          />
+          <Route
+            component={Stock}
+            exact
+            path="/stock"
+          />
+          
+          <Route
+            component={Companies}
+            exact
+            path="/company"
+          />
+
+          <Route
+            component={Forex}
+            exact
+            path="/forex"
+          />
+
+          <Route
+            component={StockDetail}
+            exact
+            path="/stockDetail/:ticker"
+          />
+
+          <Route 
+            component={Crypto}
+            exact
+            path="/crypto"
+          />
+        </Switch>
+        <Footer />
       </Router>
-    </Provider>
-  )
+    
+  );
 }
 
-export default Routes
+export default Routes;

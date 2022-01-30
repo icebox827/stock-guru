@@ -1,73 +1,118 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchStockItem } from '../actions/index';
-import { Jumbotron, Container } from 'react-bootstrap';
+import { Container, Jumbotron } from 'react-bootstrap';
 import { BsFillForwardFill } from 'react-icons/bs';
-import { FcBullish, FcBearish } from 'react-icons/fc';
+import { FcBearish, FcBullish } from 'react-icons/fc';
+import { GridItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
+import { fetchStockItem } from '../actions/index';
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 
-const StockDetail = () => {
+function StockDetail() {
   const dispatch = useDispatch();
   const { stockItem, loading, error } = useSelector((state) => state.stockItem);
   const { ticker } = useParams();
 
-  console.log(ticker)
+  console.log(ticker);
 
-  useEffect(() => {
-    dispatch(fetchStockItem(ticker));
-  },[dispatch])
+  useEffect(
+    () => {
+      dispatch(fetchStockItem(ticker));
+    },
+    [dispatch],
+  );
 
-  if (loading) return <h1>Loading data...</h1>;
-  if (error) return <h1>Error try again!</h1>;
+  if (loading) {
+    return (
+      <GridItem colSpan={4}>
+        <Loader />
+      </GridItem>
+    );
+  }
+  if (error) {
+    return (
+      <GridItem colSpan={4}>
+        <Error />
+      </GridItem>
+    );
+  }
 
   return (
     <div>
-      <Jumbotron fluid>
+      <Jumbotron fluid className="jumbotron-details">
         <Container>
           <h1 className="shadow-sm pb-2 mb-3">
-            { stockItem.symbol }
+            {stockItem.symbol}
+
             <small className="priceChange">
               <BsFillForwardFill color="transparent" />
               Price:
+
               {' '}
-              { stockItem.price }
+
+              {stockItem.price}
+
               <BsFillForwardFill color="transparent" />
               Price change:
+
               {' '}
-              <span className={`${stockItem.changes > 0 ? 'text-success' : 'text-danger'}`}>{ stockItem.changes }</span>
+
+              <span className={`${stockItem.changes > 0
+                ? 'text-success'
+                : 'text-danger'}`}
+              >
+                {stockItem.changes}
+              </span>
+
               <BsFillForwardFill color="transparent" />
-              {stockItem.changes > 0 ? <FcBullish size={40} /> : <FcBearish size={40} />}
+
+              {stockItem.changes > 0
+                ? <FcBullish size={40} />
+                : <FcBearish size={40} />}
             </small>
           </h1>
+
           <h2 className="text-center text-success">
             <BsFillForwardFill color="transparent" />
             CEO:
+
             {' '}
-            { stockItem.ceo }
+
+            {stockItem.ceo}
           </h2>
+
           <h4 className="text-center text-success">
-            { stockItem.companyName }
+            {stockItem.companyName}
+
             <BsFillForwardFill color="transparent" />
+
             <small>
               Industry:
-              { stockItem.industry }
+              {stockItem.industry}
             </small>
+
             <hr />
           </h4>
+
           <p className="lead text-justify readMaxLength">
             <img
-              src={stockItem.image}
               alt={stockItem.symbol}
-              onError={e => {
-                e.target.src = notFound;
-              }}
               className="float-left m-2 img-thumbnail w-25"
+              src={stockItem.image}
             />
-            { stockItem.description }
+
+            {stockItem.description}
+
             <br />
-            <a href={stockItem.website} target="__blank" rel="noopener" className="website">
+
+            <a
+              className="website"
+              href={stockItem.website}
+              rel="noopener"
+              target="__blank"
+            >
               {' '}
               Visit Website
             </a>

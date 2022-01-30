@@ -1,7 +1,7 @@
 import {
+  FETCH_STOCK_ITEM_FAILURE,
   FETCH_STOCK_ITEM_REQUEST,
   FETCH_STOCK_ITEM_SUCCESS,
-  FETCH_STOCK_ITEM_FAILURE,
 } from '../actions/action';
 
 const INITIAL_STATE = {
@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 };
 
 const stockItemReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case FETCH_STOCK_ITEM_REQUEST:
       return {
         ...state,
@@ -28,7 +28,7 @@ const stockItemReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        error: action.payload
+        error: action.payload,
       };
     default:
       return state;
